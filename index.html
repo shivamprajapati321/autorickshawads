@@ -11,6 +11,10 @@
 <link rel="canonical" href="https://autorickshawads.com/">
 <meta name="robots" content="index, follow">
 
+<!-- Favicon -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
 <!-- Open Graph -->
 <meta property="og:title" content="Auto Rickshaw Advertising in 200+ Cities | AutoRickshawAds">
 <meta property="og:description" content="GPS-verified auto rickshaw advertising. Hood, back panel & manufacturing across 200+ Indian cities. 44,000+ verified rickshaws.">
@@ -108,10 +112,13 @@ img{max-width:100%;display:block}
 /* ---------- NAV ---------- */
 header{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{font-family:'Barlow Condensed';font-weight:900;font-size:24px;text-transform:uppercase;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
-.logo b{color:var(--yellow)}
-.logo-mark{width:34px;height:34px;background:var(--yellow);border-radius:8px;display:grid;place-items:center;color:var(--ink);font-size:19px}
-.logo-mark-img{width:40px;height:auto;object-fit:contain}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-badge{height:40px;width:40px;border-radius:9px;display:block}
+.logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:25px;text-transform:uppercase;letter-spacing:-.01em;color:var(--ink);line-height:1}
+.logo-word b{color:var(--yellow-deep);font-weight:800}
+.logo-word.light{color:var(--white)}
+.logo-word.light b{color:var(--yellow)}
+.foot-logo{height:46px}
 .nav-links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:500}
 .nav-links a{color:var(--smoke);transition:color .2s}
 .nav-links a:hover{color:var(--white)}
@@ -269,7 +276,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
 <!-- NAV -->
 <header>
   <div class="wrap nav">
-    <a href="/" class="logo"><img src="assets/rickshaw-yellow.png" class="logo-mark-img" alt="AutoRickshawAds"/>AutoRickshaw<b>Ads</b></a>
+    <a href="/" class="logo" aria-label="AutoRickshawAds home"><img src="assets/logo-icon.svg" class="logo-badge" alt=""/><span class="logo-word light">AUTORICKSHAW<b>ADS</b></span></a>
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#why">Why Us</a>
@@ -481,7 +488,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col">
-        <a href="/" class="logo"><img src="assets/rickshaw-white.png" class="logo-mark-img" alt="AutoRickshawAds"/>AutoRickshaw<b>Ads</b></a>
+        <a href="/" class="logo" aria-label="AutoRickshawAds home"><img src="assets/logo-icon.svg" class="logo-badge" alt=""/><span class="logo-word light">AUTORICKSHAW<b>ADS</b></span></a>
         <p class="foot-about">India's GPS-verified auto rickshaw advertising network. Hood advertising, back panel vinyl and in-house hood manufacturing across 200+ cities.</p>
       </div>
       <div class="foot-col">
