@@ -152,7 +152,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.88);backdrop-f
 
 /* Hero visual — the signature rickshaw */
 .hero-visual{position:relative}
-.rickshaw-card{background:linear-gradient(160deg,var(--charcoal),var(--ink));border:1px solid var(--line);border-radius:20px;padding:26px;position:relative;overflow:hidden}
+.hero-photo-card{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px -20px rgba(0,0,0,.6)}
+.hero-photo{width:100%;height:auto;display:block}
+.hero-photo-badge{position:absolute;top:14px;left:14px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--ink);background:var(--yellow);padding:5px 11px;border-radius:7px;display:flex;align-items:center;gap:6px;z-index:2}
+.hero-photo-badge .pulse{width:6px;height:6px;border-radius:50%;background:var(--ink);animation:pulse 1.3s infinite}
 .rickshaw-card::after{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(255,184,0,.2),transparent 70%)}
 .rs-scene{position:relative;height:210px;border-radius:12px;background:linear-gradient(180deg,#141418,#0d0d10);overflow:hidden;display:grid;place-items:center;margin-bottom:18px;border:1px solid var(--line)}
 .road{position:absolute;bottom:0;left:0;right:0;height:34px;background:#17171b;border-top:2px solid var(--charcoal-2)}
@@ -266,7 +269,64 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
   section{padding:52px 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.placement-sec{padding:56px 0}
+.placement-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.placement-diagram{background:var(--charcoal);border:1px solid var(--line);border-radius:16px;padding:20px}
+.placement-diagram img{width:100%;display:block}
+.placement-zones{display:flex;flex-direction:column;gap:14px}
+.pzone{display:flex;gap:16px;background:var(--charcoal);border:1px solid var(--line);border-radius:12px;padding:14px;transition:border-color .2s}
+.pzone:hover{border-color:var(--yellow)}
+.pz-thumb{width:110px;height:80px;flex-shrink:0;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.pz-thumb img{width:100%;height:100%;object-fit:cover}
+.pz-info{flex:1}
+.pz-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--yellow)}
+.pz-info h3{font-size:18px;margin:3px 0 5px}
+.pz-info p{font-size:13px;color:#A8A8B0;line-height:1.5}
+@media(max-width:880px){.placement-grid{grid-template-columns:1fr;gap:24px}}
+
+/* ===== Lead form ===== */
+.lead-sec{padding:64px 0;background:var(--charcoal-2);border-top:1px solid var(--line)}
+.lead-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:start}
+.lead-copy h2{font-size:34px;line-height:1.1;margin:0 0 14px}
+.lead-copy p{color:var(--smoke);font-size:16px;margin:0 0 20px;max-width:440px}
+.lead-copy ul{list-style:none;padding:0;margin:0 0 26px}
+.lead-copy li{display:flex;gap:10px;align-items:center;padding:7px 0;font-size:15px;color:var(--white)}
+.lead-copy li b{color:var(--yellow)}
+.lead-wa{display:inline-flex;gap:9px;align-items:center;background:var(--green);color:#04310f;font-weight:800;padding:15px 26px;border-radius:11px;text-decoration:none}
+.lead-form{background:var(--ink);border:1px solid var(--line);border-radius:18px;padding:28px}
+.lead-form h3{margin:0 0 4px;font-size:20px}
+.lead-form .sub{color:var(--smoke);font-size:13px;margin:0 0 18px}
+.lead-form label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:var(--white)}
+.lead-form .row{margin:0 0 14px}
+.lead-form input,.lead-form select,.lead-form textarea{width:100%;box-sizing:border-box;background:var(--charcoal);border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--white);font-size:15px;font-family:inherit}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:none;border-color:var(--yellow)}
+.lead-form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lead-form button{width:100%;background:var(--yellow);color:var(--ink);font-weight:800;font-size:16px;border:none;border-radius:11px;padding:16px;cursor:pointer;transition:transform .15s}
+.lead-form button:hover{transform:translateY(-2px)}
+.lead-form .fine{color:var(--smoke);font-size:12px;text-align:center;margin:12px 0 0}
+.hp{position:absolute;left:-9999px}
+.form-note{display:none;margin:14px 0 0;padding:12px 14px;border-radius:10px;font-size:14px}
+.form-note.ok{display:block;background:rgba(37,211,102,.12);border:1px solid var(--green);color:#8ff0b4}
+.form-note.err{display:block;background:rgba(255,77,61,.12);border:1px solid var(--red);color:#ffb3ab}
+@media(max-width:820px){.lead-grid{grid-template-columns:1fr;gap:28px}.lead-form .two{grid-template-columns:1fr}}
 </style>
+
+<!-- ===== Analytics & Conversion Tracking — AutoRickshawAds ===== -->
+<!-- SETUP: create a free GA4 property at analytics.google.com, then replace G-XXXXXXXXXX below with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-XXXXXXXXXX');
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a,button');if(!a)return;
+  var href=(a.getAttribute('href')||''), t=(a.textContent||'');
+  if(href.indexOf('wa.me')>-1||href.toLowerCase().indexOf('whatsapp')>-1){
+    gtag('event','whatsapp_click',{event_category:'lead',event_label:location.pathname});}
+  if(a.classList.contains('nav-cta')||a.classList.contains('btn-dark')||/quote/i.test(t)){
+    gtag('event','quote_cta_click',{event_category:'lead',event_label:location.pathname});}
+});
+</script>
+<!-- ===== end analytics ===== -->
 </head>
 <body>
 
@@ -282,7 +342,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
       <a href="#why">Why Us</a>
       <a href="#calculator">Visibility</a>
       <a href="#process">How It Works</a>
-      <a href="#" class="nav-cta">Get Free Quote</a>
+      <a href="#lead" class="nav-cta">Get Free Quote</a>
     </nav>
     <div class="burger"><span></span><span></span><span></span></div>
   </div>
@@ -309,23 +369,14 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
 
     <!-- SIGNATURE VISUAL -->
     <div class="hero-visual">
-      <div class="rickshaw-card">
-        <div class="rs-scene">
-          <div class="live-tag"><span class="pulse"></span>LIVE · GPS TRACKED</div>
-          <div class="road"></div>
-          <div class="tuk">
-            <div class="tuk-icon-wrap">
-              <img src="data:image/png;base64,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" alt="Auto rickshaw with your brand advertising" class="tuk-icon"/>
-              <span class="ad-zone hood">YOUR BRAND</span>
-              <span class="ad-zone back">BACK PANEL</span>
-            </div>
-          </div>
-        </div>
-        <div class="rs-meta">
-          <div class="rs-cell"><div class="k">Views / Day</div><div class="v g">1,500</div></div>
-          <div class="rs-cell"><div class="k">Km / Day</div><div class="v">150</div></div>
-          <div class="rs-cell"><div class="k">6-Month Life</div><div class="v g">1-Time</div></div>
-        </div>
+      <div class="hero-photo-card">
+        <img src="assets/hero-banner.jpg" alt="Real auto rickshaw carrying a brand advertisement, GPS-tracked" class="hero-photo"/>
+        <div class="hero-photo-badge"><span class="pulse"></span>LIVE · GPS TRACKED</div>
+      </div>
+      <div class="rs-meta">
+        <div class="rs-cell"><div class="k">Views / Day</div><div class="v g">1,500</div></div>
+        <div class="rs-cell"><div class="k">Km / Day</div><div class="v">150</div></div>
+        <div class="rs-cell"><div class="k">6-Month Life</div><div class="v g">1-Time</div></div>
       </div>
     </div>
   </div>
@@ -347,6 +398,18 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
 </div>
 
 <!-- SERVICES -->
+<section class="placement-sec"><div class="wrap">
+<div class="sec-head" style="max-width:640px"><span class="sec-eyebrow">Ad Placement</span><h2>Where Your Brand Goes on the Rickshaw</h2><p>Three high-visibility zones. Pick one, or wrap the whole rickshaw for maximum impact.</p></div>
+<div class="placement-grid">
+<div class="placement-diagram"><img src="assets/placement-diagram.png" alt="Auto rickshaw ad placement zones — hood, back panel and side" loading="lazy"/></div>
+<div class="placement-zones">
+<div class="pzone"><div class="pz-thumb"><img src="assets/campaigns/hood-1.jpg" alt="Hood ad placement example" loading="lazy"/></div><div class="pz-info"><span class="pz-tag">Hood (Retro / Top)</span><h3>Full Canopy — 4 Sides</h3><p>Back, left, right & top. The largest, most visible surface — seen from every angle.</p></div></div>
+<div class="pzone"><div class="pz-thumb"><img src="assets/campaigns/back-1.jpg" alt="Back panel ad placement example" loading="lazy"/></div><div class="pz-info"><span class="pz-tag">Back Panel</span><h3>Rear — Eye Level</h3><p>Read by everyone stuck behind in traffic. Perfect for QR codes and app installs.</p></div></div>
+<div class="pzone"><div class="pz-thumb"><img src="assets/campaigns/hood-2.jpg" alt="Side ad placement example" loading="lazy"/></div><div class="pz-info"><span class="pz-tag">Side Panels</span><h3>Left & Right</h3><p>Seen by pedestrians, shops and parallel traffic as the rickshaw moves through the city.</p></div></div>
+</div>
+</div>
+</div></section>
+
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
@@ -478,7 +541,70 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
         <h2>Ready to Hit the Road?</h2>
         <p>Get a free, no-obligation quote for your city or a pan-India campaign. Reply in minutes on WhatsApp.</p>
       </div>
-      <a href="#" class="btn btn-dark">Get My Free Quote →</a>
+      <a href="#lead" class="btn btn-dark">Get My Free Quote →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- LEAD FORM -->
+<section id="lead" class="lead-sec">
+  <div class="wrap">
+    <div class="lead-grid">
+      <div class="lead-copy">
+        <h2>Get Your Free Quote</h2>
+        <p>Tell us your city and goal. You'll get pricing, availability and a sample plan — no obligation, no pressure.</p>
+        <ul>
+          <li><b>✓</b>&nbsp; GPS-verified installation proof on every rickshaw</li>
+          <li><b>✓</b>&nbsp; Own manufacturing — better rates, faster turnaround</li>
+          <li><b>✓</b>&nbsp; 44,000+ rickshaws across 200+ cities</li>
+          <li><b>✓</b>&nbsp; 12 years, 380+ brands served</li>
+        </ul>
+        <a class="lead-wa" href="https://wa.me/918484038138?text=Hi%2C%20I%20want%20a%20quote%20for%20auto%20rickshaw%20advertising.">💬 Prefer WhatsApp? Message us now</a>
+      </div>
+      <form class="lead-form" action="https://api.web3forms.com/submit" method="POST" id="araForm">
+      <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New Website Lead — Free Quote Request">
+      <input type="hidden" name="from_name" value="AutoRickshawAds Website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <h3>Request a Free Quote</h3>
+      <p class="sub">Fill this and we reply on WhatsApp within minutes.</p>
+      <div class="row two">
+        <div><label>Name</label><input name="name" required placeholder="Your name"></div>
+        <div><label>WhatsApp / Phone</label><input name="phone" required inputmode="tel" placeholder="+91 ..."></div>
+      </div>
+      <div class="row two">
+        <div><label>City</label><input name="city" required placeholder="e.g. Pune"></div>
+        <div><label>Service</label><select name="service" required><option value="" disabled selected>Select a service</option>
+        <option>Hood Advertising</option>
+        <option>Back Panel Advertising</option>
+        <option>Hood Manufacturing</option>
+        <option>Pan-India Campaign</option>
+        <option>Not sure — advise me</option></select></div>
+      </div>
+      <div class="row"><label>Brief / message <span style="color:var(--smoke);font-weight:400">(optional)</span></label>
+        <textarea name="message" rows="3" placeholder="Budget, number of rickshaws, timeline..."></textarea></div>
+      <button type="submit">Get My Free Quote →</button>
+      <p class="fine">No spam. Your details are used only to prepare your quote.</p>
+      <div class="form-note" id="araNote"></div>
+    </form>
+    <script>
+    (function(){
+      var f=document.getElementById('araForm');if(!f)return;
+      f.addEventListener('submit',async function(e){
+        e.preventDefault();var note=document.getElementById('araNote');var btn=f.querySelector('button');
+        btn.textContent='Sending...';btn.disabled=true;
+        try{
+          var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+          var d=await r.json();
+          if(d.success){note.className='form-note ok';note.textContent='✅ Thank you! We\'ve got your request and will reply on WhatsApp shortly.';f.reset();
+            if(window.gtag)gtag('event','generate_lead',{event_category:'lead',event_label:location.pathname});}
+          else{throw new Error(d.message||'error');}
+        }catch(err){note.className='form-note err';note.innerHTML='Something went wrong. Please message us directly on <a href="https://wa.me/918484038138" style="color:var(--yellow)">WhatsApp</a>.';}
+        btn.textContent='Get My Free Quote →';btn.disabled=false;
+      });
+    })();
+    </script>
     </div>
   </div>
 </section>
