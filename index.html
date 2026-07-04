@@ -283,50 +283,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--line);padding:56px 
 .pz-info h3{font-size:18px;margin:3px 0 5px}
 .pz-info p{font-size:13px;color:#A8A8B0;line-height:1.5}
 @media(max-width:880px){.placement-grid{grid-template-columns:1fr;gap:24px}}
-
-/* ===== Lead form ===== */
-.lead-sec{padding:64px 0;background:var(--charcoal-2);border-top:1px solid var(--line)}
-.lead-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:start}
-.lead-copy h2{font-size:34px;line-height:1.1;margin:0 0 14px}
-.lead-copy p{color:var(--smoke);font-size:16px;margin:0 0 20px;max-width:440px}
-.lead-copy ul{list-style:none;padding:0;margin:0 0 26px}
-.lead-copy li{display:flex;gap:10px;align-items:center;padding:7px 0;font-size:15px;color:var(--white)}
-.lead-copy li b{color:var(--yellow)}
-.lead-wa{display:inline-flex;gap:9px;align-items:center;background:var(--green);color:#04310f;font-weight:800;padding:15px 26px;border-radius:11px;text-decoration:none}
-.lead-form{background:var(--ink);border:1px solid var(--line);border-radius:18px;padding:28px}
-.lead-form h3{margin:0 0 4px;font-size:20px}
-.lead-form .sub{color:var(--smoke);font-size:13px;margin:0 0 18px}
-.lead-form label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:var(--white)}
-.lead-form .row{margin:0 0 14px}
-.lead-form input,.lead-form select,.lead-form textarea{width:100%;box-sizing:border-box;background:var(--charcoal);border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--white);font-size:15px;font-family:inherit}
-.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:none;border-color:var(--yellow)}
-.lead-form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.lead-form button{width:100%;background:var(--yellow);color:var(--ink);font-weight:800;font-size:16px;border:none;border-radius:11px;padding:16px;cursor:pointer;transition:transform .15s}
-.lead-form button:hover{transform:translateY(-2px)}
-.lead-form .fine{color:var(--smoke);font-size:12px;text-align:center;margin:12px 0 0}
-.hp{position:absolute;left:-9999px}
-.form-note{display:none;margin:14px 0 0;padding:12px 14px;border-radius:10px;font-size:14px}
-.form-note.ok{display:block;background:rgba(37,211,102,.12);border:1px solid var(--green);color:#8ff0b4}
-.form-note.err{display:block;background:rgba(255,77,61,.12);border:1px solid var(--red);color:#ffb3ab}
-@media(max-width:820px){.lead-grid{grid-template-columns:1fr;gap:28px}.lead-form .two{grid-template-columns:1fr}}
 </style>
-
-<!-- ===== Analytics & Conversion Tracking — AutoRickshawAds ===== -->
-<!-- SETUP: create a free GA4 property at analytics.google.com, then replace G-XXXXXXXXXX below with your Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','G-XXXXXXXXXX');
-document.addEventListener('click',function(e){
-  var a=e.target.closest('a,button');if(!a)return;
-  var href=(a.getAttribute('href')||''), t=(a.textContent||'');
-  if(href.indexOf('wa.me')>-1||href.toLowerCase().indexOf('whatsapp')>-1){
-    gtag('event','whatsapp_click',{event_category:'lead',event_label:location.pathname});}
-  if(a.classList.contains('nav-cta')||a.classList.contains('btn-dark')||/quote/i.test(t)){
-    gtag('event','quote_cta_click',{event_category:'lead',event_label:location.pathname});}
-});
-</script>
-<!-- ===== end analytics ===== -->
 </head>
 <body>
 
@@ -342,7 +299,7 @@ document.addEventListener('click',function(e){
       <a href="#why">Why Us</a>
       <a href="#calculator">Visibility</a>
       <a href="#process">How It Works</a>
-      <a href="#lead" class="nav-cta">Get Free Quote</a>
+      <a href="#" class="nav-cta">Get Free Quote</a>
     </nav>
     <div class="burger"><span></span><span></span><span></span></div>
   </div>
@@ -541,70 +498,7 @@ document.addEventListener('click',function(e){
         <h2>Ready to Hit the Road?</h2>
         <p>Get a free, no-obligation quote for your city or a pan-India campaign. Reply in minutes on WhatsApp.</p>
       </div>
-      <a href="#lead" class="btn btn-dark">Get My Free Quote →</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- LEAD FORM -->
-<section id="lead" class="lead-sec">
-  <div class="wrap">
-    <div class="lead-grid">
-      <div class="lead-copy">
-        <h2>Get Your Free Quote</h2>
-        <p>Tell us your city and goal. You'll get pricing, availability and a sample plan — no obligation, no pressure.</p>
-        <ul>
-          <li><b>✓</b>&nbsp; GPS-verified installation proof on every rickshaw</li>
-          <li><b>✓</b>&nbsp; Own manufacturing — better rates, faster turnaround</li>
-          <li><b>✓</b>&nbsp; 44,000+ rickshaws across 200+ cities</li>
-          <li><b>✓</b>&nbsp; 12 years, 380+ brands served</li>
-        </ul>
-        <a class="lead-wa" href="https://wa.me/918484038138?text=Hi%2C%20I%20want%20a%20quote%20for%20auto%20rickshaw%20advertising.">💬 Prefer WhatsApp? Message us now</a>
-      </div>
-      <form class="lead-form" action="https://api.web3forms.com/submit" method="POST" id="araForm">
-      <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
-      <input type="hidden" name="subject" value="New Website Lead — Free Quote Request">
-      <input type="hidden" name="from_name" value="AutoRickshawAds Website">
-      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-      <h3>Request a Free Quote</h3>
-      <p class="sub">Fill this and we reply on WhatsApp within minutes.</p>
-      <div class="row two">
-        <div><label>Name</label><input name="name" required placeholder="Your name"></div>
-        <div><label>WhatsApp / Phone</label><input name="phone" required inputmode="tel" placeholder="+91 ..."></div>
-      </div>
-      <div class="row two">
-        <div><label>City</label><input name="city" required placeholder="e.g. Pune"></div>
-        <div><label>Service</label><select name="service" required><option value="" disabled selected>Select a service</option>
-        <option>Hood Advertising</option>
-        <option>Back Panel Advertising</option>
-        <option>Hood Manufacturing</option>
-        <option>Pan-India Campaign</option>
-        <option>Not sure — advise me</option></select></div>
-      </div>
-      <div class="row"><label>Brief / message <span style="color:var(--smoke);font-weight:400">(optional)</span></label>
-        <textarea name="message" rows="3" placeholder="Budget, number of rickshaws, timeline..."></textarea></div>
-      <button type="submit">Get My Free Quote →</button>
-      <p class="fine">No spam. Your details are used only to prepare your quote.</p>
-      <div class="form-note" id="araNote"></div>
-    </form>
-    <script>
-    (function(){
-      var f=document.getElementById('araForm');if(!f)return;
-      f.addEventListener('submit',async function(e){
-        e.preventDefault();var note=document.getElementById('araNote');var btn=f.querySelector('button');
-        btn.textContent='Sending...';btn.disabled=true;
-        try{
-          var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
-          var d=await r.json();
-          if(d.success){note.className='form-note ok';note.textContent='✅ Thank you! We\'ve got your request and will reply on WhatsApp shortly.';f.reset();
-            if(window.gtag)gtag('event','generate_lead',{event_category:'lead',event_label:location.pathname});}
-          else{throw new Error(d.message||'error');}
-        }catch(err){note.className='form-note err';note.innerHTML='Something went wrong. Please message us directly on <a href="https://wa.me/918484038138" style="color:var(--yellow)">WhatsApp</a>.';}
-        btn.textContent='Get My Free Quote →';btn.disabled=false;
-      });
-    })();
-    </script>
+      <a href="#" class="btn btn-dark">Get My Free Quote →</a>
     </div>
   </div>
 </section>
