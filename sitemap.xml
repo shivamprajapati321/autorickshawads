@@ -1,398 +1,436 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://autorickshawads.com/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+      <image:image><image:loc>https://autorickshawads.com/assets/hero-banner.jpg</image:loc><image:title>Real auto rickshaw carrying a brand advertisement, GPS-tracked</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/placement-diagram.png</image:loc><image:title>Auto rickshaw ad placement zones — hood, back panel and side</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-1.jpg</image:loc><image:title>Hood ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-1.jpg</image:loc><image:title>Back panel ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-2.jpg</image:loc><image:title>Side ad placement example</image:title></image:image>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+      <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-1.jpg</image:loc><image:title>Auto rickshaw hood advertising real campaign example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/auto-rickshaw-advertising-panel-sizes.webp</image:loc><image:title>Auto rickshaw advertising panel sizes diagram — back panel 40x17 inches, left and right side 20x17, top 24x6, overall artwork 96x26 inches</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/placement-diagram.png</image:loc><image:title>Auto rickshaw ad placement zones — hood, back panel and side</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-1.jpg</image:loc><image:title>Hood ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-1.jpg</image:loc><image:title>Back panel ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-2.jpg</image:loc><image:title>Side ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-1.jpg</image:loc><image:title>Hood advertising campaign - Satara</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-2.jpg</image:loc><image:title>Hood advertising campaign - Pune</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-3.jpg</image:loc><image:title>Hood advertising campaign - Ambernath</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-4.jpg</image:loc><image:title>Hood advertising campaign - PCMC</image:title></image:image>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+      <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-1.jpg</image:loc><image:title>Auto rickshaw back panel advertising real campaign</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/backpanel-sizes.png</image:loc><image:title>Auto rickshaw back panel advertising sizes and dimensions</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/sizes/size-36x18.jpg</image:loc><image:title>36x18 back panel ad example - Star Pravah</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/sizes/size-24x24.jpg</image:loc><image:title>24x24 back panel ad example - IT Campus Guru</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/sizes/size-36x24.jpg</image:loc><image:title>36x24 back panel ad example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/placement-diagram.png</image:loc><image:title>Auto rickshaw ad placement zones — hood, back panel and side</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-1.jpg</image:loc><image:title>Hood ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-1.jpg</image:loc><image:title>Back panel ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-2.jpg</image:loc><image:title>Side ad placement example</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-1.jpg</image:loc><image:title>Back panel advertising campaign - Star Pravah</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-2.jpg</image:loc><image:title>Back panel advertising campaign - Collector Plots</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-3.jpg</image:loc><image:title>Back panel advertising campaign - IT Campus Guru</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-2.jpg</image:loc><image:title>Auto rickshaw advertising campaign - Pune</image:title></image:image>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://autorickshawads.com/auto-rickshaw-hood-fitting/</loc>
+    <lastmod>2026-08-06</lastmod>
+<changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-2.jpg</image:loc><image:title>Newly fitted auto rickshaw hood</image:title></image:image>
+  </url>
+  <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/mumbai/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/pune/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/delhi/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/bangalore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/hyderabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/chennai/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/ahmedabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/kolkata/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/surat/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/nagpur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/nashik/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/indore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/jaipur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/lucknow/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/kanpur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/patna/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/bhopal/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/aurangabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/coimbatore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-advertising/kochi/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/mumbai/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/pune/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/delhi/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/bangalore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/hyderabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/chennai/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/ahmedabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/kolkata/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/surat/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/nagpur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/nashik/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/indore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/jaipur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/lucknow/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/kanpur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/patna/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/bhopal/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/aurangabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/coimbatore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-back-panel-advertising/kochi/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/mumbai/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/pune/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/delhi/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/bangalore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/hyderabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/chennai/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/ahmedabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/kolkata/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/surat/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/nagpur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/nashik/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/indore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/jaipur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/lucknow/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/kanpur/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/patna/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/bhopal/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/aurangabad/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/coimbatore/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://autorickshawads.com/auto-rickshaw-hood-manufacturer/kochi/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 <url>
 <loc>https://autorickshawads.com/about/</loc>
-<lastmod>2026-07-31</lastmod>
+<lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
-</url>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/hood-1.jpg</image:loc><image:title>Auto rickshaw hood advertising campaign executed by AutoRickshawAds</image:title></image:image>
+    <image:image><image:loc>https://autorickshawads.com/assets/campaigns/back-1.jpg</image:loc><image:title>Auto rickshaw back panel advertising campaign with GPS-stamped proof</image:title></image:image>
+  </url>
 <url>
 <loc>https://autorickshawads.com/contact/</loc>
-<lastmod>2026-07-31</lastmod>
+<lastmod>2026-08-06</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
