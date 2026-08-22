@@ -307,6 +307,35 @@ img[width]{height:auto!important}
 @media(max-width:900px){.topbar span{white-space:normal}}
 @media(max-width:880px){.foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.foot-grid>*{min-width:0}.foot-grid .logo-word{overflow-wrap:anywhere}}
 @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+/* ===== ad landing lead form ===== */
+.lp-sec{border-top:1px solid rgba(255,255,255,.08)}
+.lp-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.lp-why h2{font-size:30px;margin:0 0 12px}
+.lp-why p{color:var(--smoke);margin:0 0 16px;max-width:46ch}
+.lp-why ul{list-style:none;padding:0;margin:0}
+.lp-why li{display:flex;gap:10px;align-items:flex-start;margin:0 0 11px;color:var(--white);font-size:15px}
+.lp-why li b{color:var(--yellow);flex:0 0 auto}
+.lp-call{margin:20px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.lp-call a{background:var(--charcoal-2,#242429);border:1px solid var(--line);border-radius:10px;padding:11px 15px;font-weight:700;font-size:14px;color:var(--white)}
+.lp-call a.wa{background:var(--green);color:#06301a;border-color:var(--green)}
+.lead-form{background:var(--ink);border:1px solid var(--line);border-radius:18px;padding:26px}
+.lead-form h3{margin:0 0 4px;font-size:20px}
+.lead-form .sub{color:var(--smoke);font-size:13px;margin:0 0 18px}
+.lead-form label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:var(--white)}
+.lead-form .row{margin:0 0 14px}
+.lead-form input,.lead-form select,.lead-form textarea{width:100%;box-sizing:border-box;background:var(--charcoal);border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--white);font-size:15px;font-family:inherit}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:none;border-color:var(--yellow)}
+.lead-form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lead-form button{width:100%;background:var(--yellow);color:var(--ink);font-weight:800;font-size:16px;border:none;border-radius:11px;padding:16px;cursor:pointer;transition:transform .15s}
+.lead-form button:hover{transform:translateY(-2px)}
+.lead-form .fine{color:var(--smoke);font-size:12px;text-align:center;margin:12px 0 0}
+.hp{position:absolute;left:-9999px}
+.form-note{display:none;margin:14px 0 0;padding:12px 14px;border-radius:10px;font-size:14px}
+.form-note.ok{display:block;background:rgba(37,211,102,.12);border:1px solid var(--green);color:#8ff0b4}
+.form-note.err{display:block;background:rgba(255,77,61,.12);border:1px solid var(--red);color:#ffb3ab}
+@media(max-width:900px){.lp-grid{grid-template-columns:1fr;gap:26px}.lp-why h2{font-size:25px}}
+@media(max-width:560px){.lead-form{padding:20px}.lead-form .two{grid-template-columns:1fr}}
 </style>
 <!-- ===== Analytics & Conversion Tracking — AutoRickshawAds ===== -->
 <!-- GA4 property: AutoRickshawAds Web · stream 15199573217 · Measurement ID G-2RG50TPG3Y -->
@@ -385,6 +414,42 @@ document.addEventListener('click',function(e){
     </div>
   </div>
 </section>
+
+<section class="lp-sec"><div class="wrap" style="padding-top:44px;padding-bottom:44px">
+<div class="lp-grid">
+  <div class="lp-why">
+    <h2>Get a Rate for Your City</h2>
+    <p>Tell us the city, the surface and roughly how many rickshaws. We come back with an exact number — no long form, no sales call.</p>
+    <ul><li><b>✓</b><span>200+ cities, 44,000+ verified rickshaws</span></li><li><b>✓</b><span>Printing, stitching and fitting all in-house</span></li><li><b>✓</b><span>GPS-stamped photo of every rickshaw</span></li><li><b>✓</b><span>Hood ₹499 · back panel ₹150 per rickshaw + 18% GST</span></li></ul>
+    <div class="lp-call">
+      <a class="wa" href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote">Message on WhatsApp</a>
+      <a href="tel:+918484038138">Call +91 84840 38138</a>
+    </div>
+  </div>
+  <form class="lead-form" action="https://api.web3forms.com/submit" method="POST" id="lpForm">
+    <input type="hidden" name="access_key" value="77719104-d8dd-483a-a189-d9472e4b7176">
+    <input type="hidden" name="subject" value="New Lead — Homepage">
+    <input type="hidden" name="from_name" value="AutoRickshawAds Website">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+    <h3>Request a Free Quote</h3>
+    <p class="sub">Five fields. We reply with an exact rate, usually the same day.</p>
+    <div class="row two">
+      <div><label for="lpName">Name</label><input id="lpName" name="name" required placeholder="Your name"></div>
+      <div><label for="lpPhone">WhatsApp / Phone</label><input id="lpPhone" name="phone" required inputmode="tel" placeholder="+91 ..."></div>
+    </div>
+    <div class="row two">
+      <div><label for="lpCity">City</label><input id="lpCity" name="city" required placeholder="e.g. Pune"></div>
+      <div><label for="lpService">Service</label><select id="lpService" name="service" required><option>Hood Advertising</option><option>Back Panel Advertising</option><option>Hood Manufacturing</option><option>Hood Fitting</option><option>Pan-India Campaign</option><option selected>Not sure — advise me</option></select></div>
+    </div>
+    <div class="row"><label for="lpMsg">Quantity, budget or timeline <span style="color:var(--smoke);font-weight:400">(optional)</span></label>
+      <textarea id="lpMsg" name="message" rows="3" placeholder="e.g. 300 rickshaws in Pune for 45 days"></textarea></div>
+    <button type="submit">Get My Free Quote →</button>
+    <p class="fine">No spam. Your details are used only to prepare your quote.</p>
+    <div class="form-note" id="lpNote"></div>
+  </form>
+</div>
+</div></section>
+
 
 <!-- BRAND STRIP -->
 <div class="brands">
@@ -715,6 +780,31 @@ document.querySelector('.burger').addEventListener('click',()=>{
   n.style.flexDirection='column'; n.style.background='var(--charcoal)';
   n.style.padding='16px'; n.style.borderRadius='12px'; n.style.border='1px solid var(--line)';
 });
+</script>
+
+<script>
+(function(){
+  var f=document.getElementById('lpForm');if(!f)return;
+  f.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var note=document.getElementById('lpNote'),btn=f.querySelector('button'),label=btn.textContent;
+    btn.textContent='Sending...';btn.disabled=true;
+    try{
+      var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+      var d=await r.json();
+      if(d.success){
+        note.className='form-note ok';
+        note.textContent='\u2705 Got it. We will reply on WhatsApp with your rate shortly.';
+        f.reset();
+        if(window.gtag)gtag('event','generate_lead',{event_category:'lead',event_label:location.pathname});
+      } else { throw new Error(d.message||'error'); }
+    }catch(err){
+      note.className='form-note err';
+      note.innerHTML='Could not send. Please message us on <a href="https://wa.me/918484038138" style="color:var(--yellow)">WhatsApp</a> instead.';
+    }
+    btn.textContent=label;btn.disabled=false;
+  });
+})();
 </script>
 </body>
 </html>
