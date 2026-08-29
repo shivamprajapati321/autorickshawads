@@ -205,6 +205,60 @@ document.addEventListener('click',function(e){
     gtag('event','quote_cta_click',{event_category:'lead',event_label:location.pathname});}
 });
 </script>
+<script>
+/* ===== lead source tracking — tells us where every WhatsApp / form lead came from ===== */
+(function(){
+  var KEY='ara_src';
+  function q(n){try{return new URLSearchParams(location.search).get(n)||''}catch(e){return''}}
+  var saved={};try{saved=JSON.parse(sessionStorage.getItem(KEY)||'{}')}catch(e){}
+  var gclid=q('gclid')||q('wbraid')||q('gbraid'), utm=q('utm_source');
+  if(gclid||utm||!saved.src){
+    var src=gclid?'ADS':(utm?utm.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,8)
+      :(/google\.|bing\.|duckduckgo|yahoo/.test(document.referrer)?'ORG'
+      :(document.referrer&&document.referrer.indexOf(location.host)<0?'REF':'DIR')));
+    saved={src:src,gclid:gclid,camp:q('utm_campaign'),term:q('utm_term'),land:location.pathname,t:Date.now()};
+    try{sessionStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}
+  }
+  var code=(saved.gclid||'').replace(/[^A-Za-z0-9]/g,'').slice(-4).toUpperCase()
+    ||(saved.t?Number(saved.t).toString(36).slice(-4).toUpperCase():'0000');
+  var slug=(location.pathname.replace(/\/+$/,'').split('/').pop()||'home').slice(0,16);
+  var ref=(saved.src||'DIR')+'-'+slug+'-'+code;
+  window.araRef=ref;window.araSrc=saved;
+
+  function stampLinks(){
+    var as=document.querySelectorAll('a[href*="wa.me"]');
+    for(var i=0;i<as.length;i++){
+      var a=as[i],h=a.getAttribute('href')||'';
+      if(h.indexOf('Ref%20')>-1||h.indexOf('(Ref ')>-1)continue;
+      try{
+        var u=new URL(h,location.origin);
+        var t=u.searchParams.get('text')||'Hi, I want a quote for auto rickshaw advertising.';
+        u.searchParams.set('text',t+'  (Ref '+ref+')');
+        a.setAttribute('href',u.toString());
+      }catch(e){}
+    }
+  }
+  function addField(f,n,v){
+    if(f.querySelector('input[name="'+n+'"]'))return;
+    var i=document.createElement('input');i.type='hidden';i.name=n;i.value=v||'';f.appendChild(i);
+  }
+  function stampForms(){
+    var fs=document.querySelectorAll('form');
+    for(var j=0;j<fs.length;j++){
+      addField(fs[j],'lead_source',saved.src);
+      addField(fs[j],'ref_code',ref);
+      addField(fs[j],'gclid',saved.gclid);
+      addField(fs[j],'ad_campaign',saved.camp);
+      addField(fs[j],'search_term',saved.term);
+      addField(fs[j],'landing_page',saved.land);
+      addField(fs[j],'submitted_from',location.pathname);
+    }
+  }
+  function run(){stampLinks();stampForms();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+  document.addEventListener('click',function(){setTimeout(stampLinks,0)},true);
+})();
+</script>
 <!-- ===== end analytics ===== -->
 </head>
 <body>
