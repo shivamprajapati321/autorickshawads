@@ -144,7 +144,8 @@ document.addEventListener('click',function(e){
   var a=e.target.closest('a,button');if(!a)return;
   var href=(a.getAttribute('href')||''), t=(a.textContent||'');
   if(href.indexOf('wa.me')>-1||href.toLowerCase().indexOf('whatsapp')>-1){
-    gtag('event','whatsapp_click',{event_category:'lead',event_label:location.pathname});}
+    gtag('event','whatsapp_click',{event_category:'lead',event_label:location.pathname});
+    if(window.oaiq)oaiq('measure','lead_created',{type:'customer_action'});}
   if(href.indexOf('mailto:')===0){
     gtag('event','email_click',{event_category:'lead',event_label:location.pathname});}
   if(href.indexOf('tel:')===0){
@@ -207,6 +208,9 @@ document.addEventListener('click',function(e){
   document.addEventListener('click',function(){setTimeout(stampLinks,0)},true);
 })();
 </script>
+<!-- ===== OpenAI Ads pixel — data source QuxTZq2WrHRCteb76wuYv7 ===== -->
+<script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"QuxTZq2WrHRCteb76wuYv7",debug:true});
+oaiq("measure","contents_viewed",{type:"contents"});</script>
 <!-- ===== end analytics ===== -->
 </head>
 <body>
