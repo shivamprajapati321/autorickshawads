@@ -189,6 +189,18 @@ img[width]{height:auto!important}
 .form-note.err{display:block;background:rgba(255,77,61,.12);border:1px solid var(--red);color:#ffb3ab}
 @media(max-width:900px){.lp-grid{grid-template-columns:1fr;gap:26px}.lp-why h2{font-size:25px}}
 @media(max-width:560px){.lead-form{padding:20px}.lead-form .two{grid-template-columns:1fr}}
+
+/* ---------- REACH CALCULATOR ---------- */
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.calc-box{background:var(--charcoal);border:1px solid var(--line);border-radius:18px;padding:30px}
+.calc-field{margin-bottom:22px}
+.calc-field label{display:block;font-size:13px;color:var(--smoke);text-transform:uppercase;letter-spacing:.04em;font-weight:600;margin-bottom:10px}
+.calc-field input[type=range]{width:100%;accent-color:var(--yellow);height:5px}
+.calc-val{font-family:'Barlow Condensed';font-weight:800;font-size:26px;color:var(--yellow)}
+.calc-out{background:var(--ink);border:1px solid var(--yellow-deep);border-radius:14px;padding:24px;text-align:center;margin-top:8px}
+.calc-out .big{font-family:'Barlow Condensed';font-weight:900;font-size:52px;color:var(--yellow);line-height:1}
+.calc-out .cap{font-size:13px;color:var(--smoke);text-transform:uppercase;letter-spacing:.05em;margin-top:6px}
+@media(max-width:900px){.calc-wrap{grid-template-columns:1fr;gap:26px}}
 </style>
 
 <!-- ===== Analytics & Conversion Tracking — AutoRickshawAds ===== -->
@@ -388,6 +400,28 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <table class="tbl"><thead><tr><th>Size</th><th>Details</th><th>Starting Price</th></tr></thead><tbody><tr><td>Wide Strip (36×18)</td><td>Budget option, wide coverage · minimum 500 rickshaws</td><td class="price">₹150 /rickshaw</td></tr><tr><td>Square (24×24)</td><td>Balanced size & visibility, ideal for logos & QR codes</td><td class="price">On quote</td></tr><tr><td>Large Panel (36×24)</td><td>Maximum impact and readability from a distance</td><td class="price">On quote</td></tr></tbody></table>
 </div></section>
 
+<!-- REACH CALCULATOR -->
+<section id="calculator"><div class="wrap">
+<div class="sec-head"><span class="sec-eyebrow">Reach Estimator</span><h2>See Your Reach Before You Spend</h2>
+<p>Move the sliders to estimate your campaign reach. Formula: 1 rickshaw travels <b style="color:var(--yellow)">150&nbsp;km/day</b> and is seen by <b style="color:var(--yellow)">~10 people per km</b> = 1,500 views per rickshaw daily.</p></div>
+<div class="calc-wrap">
+<div class="calc-box">
+<div class="calc-field">
+<label>Number of Rickshaws &mdash; <span class="calc-val" id="vR">100</span></label>
+<input type="range" id="rRick" min="10" max="2000" value="100" step="10" aria-label="Number of rickshaws">
+</div>
+<div class="calc-field">
+<label>Campaign Duration &mdash; <span class="calc-val" id="vD">3</span> months</label>
+<input type="range" id="rDur" min="1" max="12" value="3" step="1" aria-label="Campaign duration in months">
+</div>
+<a href="https://wa.me/918484038138?text=Hi%2C%20I%20used%20the%20reach%20calculator%20on%20your%20site%20and%20want%20an%20exact%20quote%20for%20auto%20rickshaw%20back%20panel%20advertising." class="btn btn-primary" style="width:100%;justify-content:center">Get Exact Quote on WhatsApp &rarr;</a>
+</div>
+<div>
+<div class="calc-out"><div class="big" id="outReach">1.35 Cr</div><div class="cap">Estimated Total Impressions</div></div>
+<div class="calc-out" style="margin-top:14px"><div class="big" id="outDaily">1.50 L</div><div class="cap">Daily Eyeballs</div></div>
+</div>
+</div>
+</div></section>
 <section class="alt"><div class="wrap">
 <div class="sec-head"><span class="sec-eyebrow">FAQ</span><h2>Common Questions</h2></div>
 <div class="faq-item"><div class="faq-q">What is auto rickshaw back panel advertising?</div><div class="faq-a">It's branding printed on weather-resistant vinyl and fitted on the rear panel of an auto rickshaw. It targets the captive audience of drivers and pedestrians behind the vehicle in traffic.</div></div><div class="faq-item"><div class="faq-q">What sizes are available?</div><div class="faq-a">Three standard sizes: 36×18 inch wide strip, 24×24 inch square, and 36×24 inch large panel. The wide strip is the most affordable; the large panel gives the most impact.</div></div><div class="faq-item"><div class="faq-q">Is back panel cheaper than hood advertising?</div><div class="faq-a">Yes. Back panel vinyl is ₹150 per rickshaw plus 18% GST, all-in — material, printing and mounting included — on a minimum order of 500 rickshaws, making it the most budget-friendly option for wide coverage.</div></div><div class="faq-item"><div class="faq-q">Can I put a QR code on the back panel?</div><div class="faq-a">Absolutely. The rear panel is read at close range in traffic, which makes it ideal for QR codes, app-install prompts and short offers.</div></div><div class="faq-item"><div class="faq-q">Do you cover my city?</div><div class="faq-a">We run campaigns across 200+ cities with 44,000+ verified rickshaws. Message us to confirm availability and pricing in your city.</div></div>
@@ -456,6 +490,30 @@ document.querySelector('.burger').addEventListener('click',()=>{const n=document
     }
     btn.textContent=label;btn.disabled=false;
   });
+})();
+</script>
+<script>
+/* Reach calculator - 1 rickshaw = 150 km/day x ~10 people per km = 1,500 views/day */
+(function(){
+  var rRick=document.getElementById('rRick'), rDur=document.getElementById('rDur');
+  if(!rRick||!rDur) return;
+  var vR=document.getElementById('vR'), vD=document.getElementById('vD');
+  var outReach=document.getElementById('outReach'), outDaily=document.getElementById('outDaily');
+  var PER_RICK_DAILY=150*10;
+  function fmt(n){
+    if(n>=1e7)return (n/1e7).toFixed(2)+' Cr';
+    if(n>=1e5)return (n/1e5).toFixed(2)+' L';
+    if(n>=1e3)return (n/1e3).toFixed(0)+' K';
+    return Math.round(n).toLocaleString('en-IN');
+  }
+  function calc(){
+    var r=+rRick.value, d=+rDur.value;
+    vR.textContent=r; vD.textContent=d;
+    var daily=r*PER_RICK_DAILY;
+    outDaily.textContent=fmt(daily);
+    outReach.textContent=fmt(daily*30*d);
+  }
+  rRick.addEventListener('input',calc); rDur.addEventListener('input',calc); calc();
 })();
 </script>
 </body>
