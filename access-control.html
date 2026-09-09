@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>Team Access · Prajapati Advertising</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<script src="/lib/access-guard.js"></script>
+<style>
+:root{
+  --primary:#0B1957; --primary-700:#0E1F6E; --primary-50:#EEF1FB;
+  --accent:#26d0ce; --accent-deep:#0fa6a4; --gold:#F5B800;
+  --bg:#F7F8FC; --card:#FFFFFF; --surface:#FAFBFE; --border:#E6E9F2; --border-strong:#D5DAE9;
+  --text-1:#0E1942; --text-2:#5B6480; --text-3:#8E97B2;
+  --success:#16A34A; --success-bg:#E7F8EE; --danger:#DC2626;
+  --r-md:10px; --r-lg:14px; --r-xl:18px;
+  --shadow-sm:0 1px 2px rgba(11,25,87,.04),0 1px 3px rgba(11,25,87,.06);
+  --shadow-md:0 4px 12px rgba(11,25,87,.06),0 2px 6px rgba(11,25,87,.04);
+  --shadow-lg:0 12px 32px rgba(11,25,87,.10),0 4px 12px rgba(11,25,87,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text-1);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:22px 18px 120px}
+.topbar{margin-bottom:18px}
+.back-link{font-size:13px;color:var(--text-2);text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-bottom:12px}
+.back-link:hover{color:var(--primary)}
+.page-title{font-size:23px;font-weight:700;letter-spacing:-.4px}
+.page-title i{vertical-align:-3px;margin-right:6px;color:var(--accent-deep)}
+.page-sub{font-size:13px;color:var(--text-2);margin-top:3px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-sm)}
+.picker{padding:18px 20px;margin-bottom:14px}
+label.lbl{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text-2);margin-bottom:7px}
+.dd-wrap{position:relative}
+.dd-input{width:100%;padding:12px 14px;font-size:15px;border:1px solid var(--border-strong);border-radius:10px;font-family:inherit;outline:none;background:var(--card);color:var(--text-1)}
+.dd-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(38,208,206,.12)}
+.dd{position:absolute;top:100%;left:0;right:0;z-index:60;background:var(--card);border:1px solid var(--border);border-radius:10px;margin-top:4px;max-height:300px;overflow-y:auto;display:none;box-shadow:var(--shadow-lg)}
+.dd.open{display:block}
+.dd-item{padding:11px 14px;cursor:pointer;border-bottom:1px solid var(--bg);display:flex;align-items:center;gap:10px}
+.dd-item:last-child{border-bottom:none}
+.dd-item:hover{background:var(--primary-50)}
+.dd-av{width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0}
+.dd-info{min-width:0}
+.dd-nm{font-size:13.5px;font-weight:600;color:var(--text-1)}
+.dd-meta{font-size:11px;color:var(--text-3);font-family:'JetBrains Mono',monospace}
+.dd-empty{padding:12px 14px;font-size:13px;color:var(--text-3);font-style:italic}
+.member-head{display:none;align-items:center;gap:14px;padding:16px 20px;background:linear-gradient(135deg,var(--primary),var(--primary-700));border-radius:var(--r-lg);color:#fff;margin-bottom:14px;box-shadow:var(--shadow-md)}
+.member-head.show{display:flex}
+.mh-av{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex-shrink:0;border:2px solid rgba(38,208,206,.4)}
+.mh-info{flex:1;min-width:0}
+.mh-name{font-size:17px;font-weight:700}
+.mh-meta{font-size:12px;color:rgba(255,255,255,.7);font-family:'JetBrains Mono',monospace;margin-top:2px}
+.mh-role-select{padding:7px 11px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;font-family:inherit;font-size:12.5px;font-weight:600}
+.mh-role-select option{color:#0E1942}
+.mh-edit-btn{padding:7px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:all .15s}
+.mh-edit-btn:hover{background:rgba(255,255,255,.2)}
+.edit-profile{display:none;padding:18px 20px;margin-bottom:14px}
+.edit-profile.show{display:block}
+.ep-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.ep-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.ep-actions{display:flex;gap:10px;justify-content:flex-end}
+@media(max-width:560px){ .ep-grid{grid-template-columns:1fr} }
+.presets{display:none;flex-wrap:wrap;gap:8px;padding:14px 20px;margin-bottom:14px}
+.presets.show{display:flex}
+.presets .ptitle{width:100%;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-2);margin-bottom:2px}
+.preset-btn{padding:8px 14px;border-radius:999px;border:1px solid var(--border-strong);background:var(--card);color:var(--text-1);font-family:inherit;font-size:12.5px;font-weight:600;cursor:pointer;transition:all .15s}
+.preset-btn:hover{border-color:var(--accent);background:var(--primary-50);color:var(--primary)}
+.features{display:none}
+.features.show{display:block}
+.feat-section{margin-bottom:8px}
+.feat-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--accent-deep);padding:14px 4px 8px}
+.feat-row{display:flex;align-items:center;gap:14px;padding:13px 18px;border-bottom:1px solid var(--border)}
+.feat-row:last-child{border-bottom:none}
+.feat-ico{font-size:20px;width:26px;text-align:center;flex-shrink:0}
+.feat-name{flex:1;font-size:14.5px;font-weight:500;color:var(--text-1)}
+.feat-default{font-size:10.5px;color:var(--text-3);font-family:'JetBrains Mono',monospace;margin-left:8px}
+.feat-locked{font-size:11px;color:var(--text-3);font-style:italic;display:flex;align-items:center;gap:5px}
+.sw{position:relative;width:52px;height:30px;flex-shrink:0;cursor:pointer}
+.sw input{opacity:0;width:0;height:0;position:absolute}
+.sw .track{position:absolute;inset:0;background:#CBD2E0;border-radius:999px;transition:background .18s}
+.sw .knob{position:absolute;top:3px;left:3px;width:24px;height:24px;background:#fff;border-radius:50%;transition:transform .18s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.sw input:checked + .track{background:var(--success)}
+.sw input:checked + .track + .knob{transform:translateX(22px)}
+.sw.locked{opacity:.4;cursor:not-allowed}
+.savebar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);box-shadow:0 -4px 20px rgba(11,25,87,.08);padding:14px 20px;display:none;align-items:center;justify-content:space-between;gap:14px;z-index:80}
+.savebar.show{display:flex}
+.savebar-info{font-size:13px;color:var(--text-2)}
+.savebar-info b{color:var(--primary)}
+.btn{font-family:inherit;font-weight:600;font-size:14px;padding:11px 22px;border-radius:10px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all .15s}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 2px 8px rgba(11,25,87,.25)}
+.btn-primary:hover{background:var(--primary-700)}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed}
+.btn-ghost{background:var(--card);color:var(--text-2);border:1px solid var(--border)}
+.empty-state{text-align:center;padding:50px 20px;color:var(--text-3)}
+.empty-state i{font-size:40px;display:block;margin-bottom:12px;color:var(--border-strong)}
+.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:500;display:none;z-index:200;box-shadow:var(--shadow-lg)}
+.toast.show{display:block}
+.toast.success{background:var(--success)} .toast.error{background:var(--danger)}
+.blocked{max-width:440px;margin:80px auto;text-align:center;padding:40px;background:var(--card);border-radius:var(--r-xl);box-shadow:var(--shadow-lg)}
+.blocked i{font-size:48px;color:var(--gold)}
+.hide{display:none}
+@media(max-width:560px){ .member-head{flex-wrap:wrap} .mh-role-select{width:100%} }
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <div class="topbar">
+    <a href="app.html#v2" class="back-link"><i class="ti ti-arrow-left"></i> Back to admin</a>
+    <h1 class="page-title"><i class="ti ti-shield-lock"></i> Team Access</h1>
+    <p class="page-sub">Member chuno, phir har feature ON/OFF karo. Save karte hi unke account mein lagu.</p>
+  </div>
+  <div id="loadingState" class="empty-state"><i class="ti ti-loader"></i><div>Loading…</div></div>
+  <div id="mainUI" class="hide">
+    <div class="card picker">
+      <label class="lbl">Member chuno</label>
+      <div class="dd-wrap">
+        <input type="text" id="memSearch" class="dd-input" placeholder="Naam ya phone search karo…" autocomplete="off">
+        <div id="memDD" class="dd"></div>
+      </div>
+    </div>
+    <div class="member-head" id="memberHead">
+      <div class="mh-av" id="mhAv">?</div>
+      <div class="mh-info">
+        <div class="mh-name" id="mhName">—</div>
+        <div class="mh-meta" id="mhMeta">—</div>
+      </div>
+      <button class="mh-edit-btn" id="mhEditBtn" onclick="openEditProfile()" title="Naam / phone edit karo">
+        <i class="ti ti-edit"></i> Edit
+      </button>
+      <select class="mh-role-select" id="mhRole" onchange="onRoleChange(this.value)"></select>
+    </div>
+
+    <!-- Inline edit form for name + phone -->
+    <div class="card edit-profile" id="editProfile">
+      <div class="ep-title"><i class="ti ti-user-edit"></i> Member details edit</div>
+      <div class="ep-grid">
+        <div>
+          <label class="lbl">Naam</label>
+          <input type="text" id="epName" class="dd-input" placeholder="Full name">
+        </div>
+        <div>
+          <label class="lbl">Phone (10 digit)</label>
+          <input type="tel" id="epPhone" class="dd-input" placeholder="9876543210" maxlength="10" inputmode="numeric">
+        </div>
+      </div>
+      <div class="ep-actions">
+        <button class="btn btn-ghost" onclick="closeEditProfile()">Cancel</button>
+        <button class="btn btn-primary" id="epSaveBtn" onclick="saveProfile()"><i class="ti ti-check"></i> Save details</button>
+      </div>
+    </div>
+
+    <div class="card presets" id="presets"></div>
+    <div class="card" id="hrAccessCard" style="display:none;border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div>
+          <div style="font-weight:700;font-size:14px;color:var(--navy,#0B1957)">👥 HR Manager Access</div>
+          <div style="font-size:12px;color:var(--text-2,#64748B);margin-top:3px">HR Admin Panel — sab employees ki attendance, leave approve, payroll. <b>Sirf owner</b> de sakta hai.</div>
+        </div>
+        <button id="hrToggleBtn" onclick="toggleMemberHr()" style="padding:8px 16px;border-radius:8px;border:none;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap">—</button>
+      </div>
+    </div>
+    <div class="card features" id="features"></div>
+  </div>
+</div>
+<div class="savebar" id="saveBar">
+  <div class="savebar-info"><b id="onCount">0</b> features ON</div>
+  <div style="display:flex;gap:10px;">
+    <button class="btn btn-ghost" onclick="resetMember()">Reset</button>
+    <button class="btn btn-primary" id="saveBtn" onclick="saveAccess()"><i class="ti ti-device-floppy"></i> Save access</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+"use strict";
+var CONFIG={ supabaseUrl:'https://fpbktcgtspqsqpaytslv.supabase.co', supabaseKey:'sb_publishable_JhObe56x_zETygpy6y8-DQ_qpQXIz_j' };
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function toast(m,t){var e=$('toast');e.textContent=m;e.className='toast '+(t||'')+' show';clearTimeout(window._t);window._t=setTimeout(function(){e.classList.remove('show');},2800);}
+function api(path,opt){opt=opt||{};opt.headers=Object.assign({apikey:CONFIG.supabaseKey,Authorization:'Bearer '+CONFIG.supabaseKey},opt.headers||{});if(opt.body&&typeof opt.body!=='string'){opt.headers['Content-Type']='application/json';opt.body=JSON.stringify(opt.body);}return fetch(CONFIG.supabaseUrl+path,opt).then(function(r){if(!r.ok)return r.text().then(function(t){throw new Error('API '+r.status+': '+t);});if(r.status===204)return null;return r.text().then(function(t){return t&&t.trim()?JSON.parse(t):null;});});}
+
+var MODULES=[
+  {id:'dashboard',name:'Dashboard',icon:'📊',section:'Workspace',roles:['owner','admin','operations_manager','data_manager']},
+  {id:'campaigns',name:'Campaigns',icon:'📋',section:'Workspace',roles:['owner','admin','operations_manager']},
+  {id:'members',name:'Team members',icon:'👥',section:'Workspace',roles:['owner','admin']},
+  {id:'assignments',name:'Daily assignments',icon:'🗓️',section:'Workspace',roles:['owner','admin','operations_manager']},
+  {id:'photos',name:'Photos browser',icon:'📸',section:'Workspace',roles:['owner','admin','operations_manager','data_manager','verifier']},
+  {id:'manual-upload',name:'Manual Upload',icon:'☁️',section:'Workspace',roles:['owner','admin','operations_manager','data_manager']},
+  {id:'verifier',name:'Verifier portal',icon:'✅',section:'Quality & Output',roles:['owner','admin','verifier','data_manager','operations_manager']},
+  {id:'reports',name:'Reports',icon:'📈',section:'Quality & Output',roles:['owner','admin','operations_manager','data_manager']},
+  {id:'clientlinks',name:'Client links',icon:'🔗',section:'Quality & Output',roles:['owner','admin','operations_manager']},
+  {id:'ppt',name:'PPT Generator',icon:'🎬',section:'Quality & Output',roles:['owner','admin','sales','operations_manager','data_manager']},
+  {id:'master-cache',name:'Master Database',icon:'💾',section:'Quality & Output',roles:['owner','admin','data_manager']},
+  {id:'launch-campaign',name:'Launch Campaign',icon:'🚀',section:'Operations',roles:['owner','admin','operations_manager']},
+  {id:'campaign-status',name:'Campaign Status',icon:'🗂️',section:'Operations',roles:['owner','admin','operations_manager','data_manager','printing','stitching','delivery']},
+  {id:'assign-operators',name:'Assign Operators',icon:'🎯',section:'Operations',roles:['owner','admin','operations_manager']},
+  {id:'designer-uploads',name:'Designer Uploads',icon:'🎨',section:'Operations',roles:['owner','admin','operations_manager','designer']},
+  {id:'design-tasks',name:'Design Tasks',icon:'📋',section:'Operations',roles:['owner','admin','operations_manager','sales','designer']},
+  {id:'execution-plan',name:'Execution Plan',icon:'📋',section:'Operations',roles:['owner','admin','operations_manager']},
+  {id:'execution-entry',name:'Daily Entry',icon:'✍️',section:'Operations',roles:['owner','admin','operations_manager','operations']},
+  {id:'rates-master',name:'Rates Master',icon:'💵',section:'Operations',roles:['owner','admin']},
+  {id:'ops-dashboard',name:'Ops Dashboard',icon:'📟',section:'Operations',roles:['owner','admin','operations_manager']},
+  {id:'printing',name:'Printing',icon:'🖨️',section:'Production',roles:['owner','admin','printing','operations_manager']},
+  {id:'stitching',name:'Stitching',icon:'🧵',section:'Production',roles:['owner','admin','stitching','operations_manager']},
+  {id:'delivery',name:'Delivery',icon:'🚚',section:'Production',roles:['owner','admin','delivery','operations_manager']},
+  {id:'field',name:'Field App (PWA)',icon:'📍',section:'Production',roles:['owner','admin','field','operations_manager']},
+  {id:'sales-trips',name:'Sales Trips',icon:'🚗',section:'Operations',roles:['owner','admin','sales','operations_manager']},
+  {id:'expenses',name:'Expenses',icon:'🧾',section:'Finance',roles:['owner','admin','accountant','operations_manager','sales','data_manager']},
+  {id:'payments',name:'Payments',icon:'💰',section:'Finance',roles:['owner','admin','accountant']},
+  {id:'outstanding',name:'Outstanding',icon:'⏳',section:'Finance',roles:['owner','admin','accountant']},
+  {id:'report-daily',name:'Daily Report',icon:'📅',section:'Reports Suite',roles:['owner','admin','operations_manager','data_manager']},
+  {id:'report-team',name:'Team Report',icon:'🏆',section:'Reports Suite',roles:['owner','admin','operations_manager','data_manager']},
+  {id:'report-campaign',name:'Campaign Report',icon:'📈',section:'Reports Suite',roles:['owner','admin','operations_manager','data_manager','sales']},
+  {id:'reassignment-history',name:'Reassignment Log',icon:'🔄',section:'Reports Suite',roles:['owner','admin','operations_manager','data_manager']},
+  {id:'archive-viewer',name:'Archive Viewer',icon:'📦',section:'Reports Suite',roles:['owner','admin','operations_manager','data_manager','sales']},
+  {id:'crm',name:'CRM Dashboard',icon:'💼',section:'Sales CRM',roles:['owner','admin','sales']},
+  {id:'leads',name:'Leads',icon:'🎣',section:'Sales CRM',roles:['owner','admin','sales']},
+  {id:'quotations',name:'Quotations',icon:'📝',section:'Sales CRM',roles:['owner','admin','sales']},
+  {id:'pi',name:'Proforma Invoice',icon:'🧾',section:'Sales CRM',roles:['owner','admin','sales']},
+  {id:'invoices',name:'Invoices',icon:'📄',section:'Sales CRM',roles:['owner','admin','sales']},
+  {id:'clients',name:'Clients',icon:'🏢',section:'Sales CRM',roles:['owner','admin','sales']},
+  {id:'hub',name:'Operations Hub',icon:'🛠️',section:'Tools',roles:['owner','admin','operations_manager']},
+  {id:'sales-hub',name:'Sales Hub',icon:'📊',section:'Tools',roles:['owner','admin','sales']},
+  {id:'owner',name:'Owner Console',icon:'👑',section:'Owner Only',roles:['owner','admin'],ownerOnly:true},
+  {id:'access-control',name:'Access Control',icon:'🔐',section:'Owner Only',roles:['owner','admin'],ownerOnly:true},
+  {id:'add-team-member',name:'Add Team Member',icon:'➕',section:'Workspace',roles:['owner','admin']},
+  {id:'bulkimport',name:'Bulk Import',icon:'📥',section:'Owner Only',roles:['owner','admin'],ownerOnly:true}
+];
+var ROLE_DEFAULTS={
+  'sales':['crm','leads','quotations','pi','invoices','clients','sales-hub','report-campaign','archive-viewer','ppt'],
+  'data_manager':['dashboard','photos','manual-upload','verifier','ppt','master-cache','reports','report-daily','report-team','report-campaign','campaign-status','reassignment-history','archive-viewer'],
+  'operations_manager':['dashboard','campaigns','assignments','photos','manual-upload','launch-campaign','campaign-status','assign-operators','designer-uploads','design-tasks','execution-plan','execution-entry','ops-dashboard','printing','stitching','delivery','field','verifier','ppt','reports','report-daily','report-team','report-campaign','reassignment-history','archive-viewer'],
+  'operations':['dashboard','campaign-status','execution-entry','launch-campaign'],
+  'verifier':['verifier','photos','reports'],
+  'accountant':['expenses','payments','outstanding','report-campaign'],
+  'printing':['printing','campaign-status'],
+  'stitching':['stitching','campaign-status'],
+  'delivery':['delivery','campaign-status'],
+  'field':['field']
+};
+var ROLE_OPTIONS=['owner','admin','sales','data_manager','operations_manager','operations','verifier','accountant','printing','stitching','delivery','field'];
+var PRESET_KEYS=['sales','data_manager','operations_manager','printing','stitching','delivery','verifier','field'];
+var state={ me:null, members:[], selected:null, draft:{} };
+
+(function(){
+  var me=(window.AccessGuard&&AccessGuard.getUser)?AccessGuard.getUser():null;
+  if(!me){
+    var ph=localStorage.getItem('prajapati_admin_phone')||localStorage.getItem('prajapati_admin_phone_v2');
+    if(!ph){ gotoLogin(); return; }
+    api('/rest/v1/trial_team_members?phone=eq.'+ph+'&active=eq.true&select=*').then(function(m){
+      if(!m||!m.length){ gotoLogin(); return; }
+      finishBoot(m[0]);
+    }).catch(function(e){ showBlocked('Load error: '+e.message); });
+    return;
+  }
+  finishBoot(me);
+})();
+
+function gotoLogin(){ try{ if(window.top&&window.top!==window.self){ window.top.location.href='/login.html'; return; } }catch(e){} window.location.href='/login.html'; }
+function showBlocked(msg){ document.body.innerHTML='<div class="blocked"><i class="ti ti-lock"></i><h2 style="margin:14px 0 8px;">Access Restricted</h2><p style="color:#5B6480;">'+esc(msg)+'</p></div>'; }
+function finishBoot(me){
+  var role=String(me.role||'').toLowerCase();
+  if(role!=='owner'&&role!=='admin'){ showBlocked('Sirf Owner/Admin. Aapka role: '+role); return; }
+  state.me=me; window._me=me; loadMembers();
+}
+function loadMembers(){
+  api('/rest/v1/trial_team_members?select=id,name,phone,role,active,module_access,hr_role&active=eq.true&order=role.asc,name.asc')
+    .then(function(rows){
+      state.members=(rows||[]).map(function(m){
+        if(m.module_access&&typeof m.module_access==='string'){ try{m.module_access=JSON.parse(m.module_access);}catch(e){m.module_access={};} }
+        if(!m.module_access) m.module_access={};
+        return m;
+      });
+      $('loadingState').classList.add('hide');
+      $('mainUI').classList.remove('hide');
+      buildRoleOptions(); setupSearch();
+    })
+    .catch(function(e){ $('loadingState').innerHTML='<div style="color:#DC2626;">Load failed: '+esc(e.message)+'<br><small>STEP1 SQL chala hai? (module_access column chahiye)</small></div>'; });
+}
+function buildRoleOptions(){ $('mhRole').innerHTML=ROLE_OPTIONS.map(function(r){return '<option value="'+r+'">'+r.replace(/_/g,' ')+'</option>';}).join(''); }
+
+function setupSearch(){
+  var inp=$('memSearch'),dd=$('memDD');
+  function render(){
+    var q=(inp.value||'').toLowerCase().trim();
+    var list=state.members.filter(function(m){ return !q||(m.name||'').toLowerCase().indexOf(q)>-1||(m.phone||'').indexOf(q)>-1||(m.role||'').toLowerCase().indexOf(q)>-1; }).slice(0,60);
+    dd.innerHTML=list.length?list.map(function(m){
+      var ini=(m.name||'?').split(' ').map(function(p){return p[0];}).join('').substring(0,2).toUpperCase();
+      return '<div class="dd-item" data-id="'+m.id+'"><div class="dd-av">'+ini+'</div><div class="dd-info"><div class="dd-nm">'+esc(m.name||'—')+'</div><div class="dd-meta">'+esc(m.role||'—')+' · '+esc(m.phone||'')+'</div></div></div>';
+    }).join(''):'<div class="dd-empty">Koi member nahi mila</div>';
+    dd.classList.add('open');
+    Array.prototype.forEach.call(dd.querySelectorAll('.dd-item'),function(el){ el.addEventListener('mousedown',function(){ selectMember(el.getAttribute('data-id')); }); });
+  }
+  inp.addEventListener('input',render); inp.addEventListener('focus',render);
+  document.addEventListener('click',function(e){ if(e.target!==inp&&!dd.contains(e.target)) dd.classList.remove('open'); });
+}
+function selectMember(id){
+  var m=state.members.find(function(x){return String(x.id)===String(id);});
+  if(!m) return;
+  state.selected=m; state.draft=Object.assign({},m.module_access||{});
+  $('memSearch').value=m.name||''; $('memDD').classList.remove('open');
+  var ini=(m.name||'?').split(' ').map(function(p){return p[0];}).join('').substring(0,2).toUpperCase();
+  $('mhAv').textContent=ini; $('mhName').textContent=m.name||'—'; $('mhMeta').textContent=(m.phone||'')+' · '+(m.role||'');
+  $('mhRole').value=String(m.role||'').toLowerCase();
+  $('memberHead').classList.add('show');
+  closeEditProfile();
+  buildPresets(); renderFeatures();
+  renderHrAccessCard(m);
+  $('presets').classList.add('show'); $('features').classList.add('show'); $('saveBar').classList.add('show');
+}
+
+// HR Manager access card — only OWNER can grant/revoke
+function renderHrAccessCard(m){
+  var card=$('hrAccessCard'); if(!card) return;
+  var iAmOwner = window._me && String(window._me.role||'').toLowerCase()==='owner';
+  var theirRole = String(m.role||'').toLowerCase();
+  if(!iAmOwner || ['owner','admin'].includes(theirRole)){ card.style.display='none'; return; }
+  card.style.display='';
+  var btn=$('hrToggleBtn');
+  var isHr = m.hr_role===true;
+  btn.textContent = isHr ? '✕ Remove HR' : '+ Make HR Manager';
+  btn.style.background = isHr ? '#FECACA' : '#B89B4E';
+  btn.style.color = isHr ? '#BE123C' : '#3a2f12';
+}
+async function toggleMemberHr(){
+  var m=state.selected; if(!m) return;
+  if(!(window._me && String(window._me.role||'').toLowerCase()==='owner')){ toast('Sirf owner HR access de sakta hai','error'); return; }
+  var makeHr = !(m.hr_role===true);
+  if(!confirm(makeHr ? (m.name||'Member')+' ko HR Manager access dena hai? Yeh sab employees ki attendance/leave/payroll dekh sakega.' : 'HR Manager access hatana hai?')) return;
+  try{
+    await api('/rest/v1/trial_team_members?id=eq.'+m.id,{method:'PATCH',headers:{Prefer:'return=minimal'},body:{hr_role:makeHr}});
+    m.hr_role=makeHr;
+    renderHrAccessCard(m);
+    toast(makeHr?'✓ HR Manager access diya':'HR access hataya','success');
+  }catch(e){ toast('Failed: '+e.message,'error'); }
+}
+
+// ─── Edit name + phone ───
+function openEditProfile(){
+  var m=state.selected; if(!m) return;
+  $('epName').value=m.name||'';
+  $('epPhone').value=m.phone||'';
+  $('editProfile').classList.add('show');
+}
+function closeEditProfile(){ $('editProfile').classList.remove('show'); }
+
+function saveProfile(){
+  var m=state.selected; if(!m) return;
+  var newName=$('epName').value.trim();
+  var newPhone=$('epPhone').value.replace(/\D/g,'');
+  if(!newName){ toast('Naam khali nahi ho sakta','error'); return; }
+  if(newPhone.length!==10){ toast('Phone 10 digit ka hona chahiye','error'); return; }
+
+  var btn=$('epSaveBtn'); btn.disabled=true; btn.innerHTML='<i class="ti ti-loader"></i> Saving…';
+
+  // First: check phone not used by another active member
+  api('/rest/v1/trial_team_members?phone=eq.'+newPhone+'&select=id,name')
+    .then(function(rows){
+      var clash=(rows||[]).find(function(r){ return String(r.id)!==String(m.id); });
+      if(clash){
+        btn.disabled=false; btn.innerHTML='<i class="ti ti-check"></i> Save details';
+        toast('Yeh number pehle se "'+(clash.name||'kisi')+'" ke paas hai','error');
+        return Promise.reject('dup');
+      }
+      // Update name + phone
+      return api('/rest/v1/trial_team_members?id=eq.'+m.id,{method:'PATCH',headers:{Prefer:'return=minimal'},body:{name:newName,phone:newPhone}});
+    })
+    .then(function(){
+      m.name=newName; m.phone=newPhone;
+      var ini=(newName||'?').split(' ').map(function(p){return p[0];}).join('').substring(0,2).toUpperCase();
+      $('mhAv').textContent=ini; $('mhName').textContent=newName; $('mhMeta').textContent=newPhone+' · '+(m.role||'');
+      $('memSearch').value=newName;
+      btn.disabled=false; btn.innerHTML='<i class="ti ti-check"></i> Save details';
+      closeEditProfile();
+      toast('✓ Details update ho gaye','success');
+    })
+    .catch(function(e){
+      btn.disabled=false; btn.innerHTML='<i class="ti ti-check"></i> Save details';
+      if(e!=='dup') toast('Save error: '+(e.message||e),'error');
+    });
+}
+
+function buildPresets(){
+  var html='<div class="ptitle">Quick preset — ek click mein default access</div>';
+  html+=PRESET_KEYS.map(function(r){return '<button class="preset-btn" onclick="applyPreset(\''+r+'\')">'+r.replace(/_/g,' ')+'</button>';}).join('');
+  $('presets').innerHTML=html;
+}
+function isOn(modId){
+  var m=state.selected; if(!m) return false;
+  var role=String($('mhRole').value||m.role||'').toLowerCase();
+  if(role==='owner'||role==='admin') return true;
+  if(state.draft[modId]===true) return true;
+  if(state.draft[modId]===false) return false;
+  var defs=ROLE_DEFAULTS[role];
+  return defs?defs.indexOf(modId)>-1:false;
+}
+function renderFeatures(){
+  var m=state.selected; if(!m) return;
+  var role=String($('mhRole').value||m.role||'').toLowerCase();
+  var isAdminRole=(role==='owner'||role==='admin');
+  var sections=[]; MODULES.forEach(function(mod){ if(sections.indexOf(mod.section)===-1) sections.push(mod.section); });
+  var html=sections.map(function(sec){
+    var rows=MODULES.filter(function(x){return x.section===sec;}).map(function(mod){
+      if(mod.ownerOnly){
+        return '<div class="feat-row"><div class="feat-ico">'+mod.icon+'</div><div class="feat-name">'+esc(mod.name)+'</div><div class="feat-locked"><i class="ti ti-lock"></i> Owner only</div></div>';
+      }
+      var on=isOn(mod.id);
+      var roleAllowed=mod.roles.indexOf(role)>-1;
+      var lockedAdmin=isAdminRole;
+      return '<div class="feat-row"><div class="feat-ico">'+mod.icon+'</div>'+
+        '<div class="feat-name">'+esc(mod.name)+(roleAllowed&&!isAdminRole?'<span class="feat-default">role default</span>':'')+'</div>'+
+        '<label class="sw'+(lockedAdmin?' locked':'')+'"><input type="checkbox" '+(on?'checked':'')+(lockedAdmin?' disabled':'')+' onchange="toggleFeat(\''+mod.id+'\',this.checked)"><span class="track"></span><span class="knob"></span></label>'+
+      '</div>';
+    }).join('');
+    return '<div class="feat-section"><div class="feat-section-title">'+esc(sec)+'</div>'+rows+'</div>';
+  }).join('');
+  $('features').innerHTML=html; updateOnCount();
+}
+function toggleFeat(modId,checked){ state.draft[modId]=checked?true:false; updateOnCount(); }
+function updateOnCount(){ $('onCount').textContent=MODULES.filter(function(m){return !m.ownerOnly&&isOn(m.id);}).length; }
+function onRoleChange(newRole){ $('mhMeta').textContent=(state.selected.phone||'')+' · '+newRole; renderFeatures(); }
+function applyPreset(roleKey){
+  var preset=ROLE_DEFAULTS[roleKey]||[]; var d={};
+  MODULES.forEach(function(m){ if(!m.ownerOnly) d[m.id]=preset.indexOf(m.id)>-1; });
+  state.draft=d; $('mhRole').value=roleKey; renderFeatures();
+  toast('Preset "'+roleKey.replace(/_/g,' ')+'" laga — ab Save dabao','');
+}
+function resetMember(){
+  if(!state.selected) return;
+  state.draft=Object.assign({},state.selected.module_access||{});
+  $('mhRole').value=String(state.selected.role||'').toLowerCase();
+  renderFeatures();
+}
+function saveAccess(){
+  var m=state.selected; if(!m) return;
+  var newRole=$('mhRole').value;
+  var btn=$('saveBtn'); btn.disabled=true; btn.innerHTML='<i class="ti ti-loader"></i> Saving…';
+  // ⭐ SYNC FIX: FULL explicit map likho (har module ka true/false), partial draft nahi.
+  // Yeh admin-v2 ke taSave() jaisa hi pattern hai → dono pages + login 100% same.
+  // Warna jo module draft me nahi hai uske liye role-default decide karta tha → conflict.
+  var roleLc=String(newRole||'').toLowerCase();
+  var isAdminRole=(roleLc==='owner'||roleLc==='admin');
+  var fullAccess={};
+  if(!isAdminRole){
+    MODULES.forEach(function(mod){
+      if(mod.ownerOnly) return;            // owner-only modules map me nahi
+      fullAccess[mod.id]=isOn(mod.id)?true:false;
+    });
+  } else {
+    fullAccess=Object.assign({},state.draft); // owner/admin: sab access, map ki zaroorat nahi
+  }
+  api('/rest/v1/trial_team_members?id=eq.'+m.id,{method:'PATCH',headers:{Prefer:'return=minimal'},body:{role:newRole,module_access:fullAccess}})
+    .then(function(){
+      m.role=newRole; m.module_access=Object.assign({},fullAccess);
+      state.draft=Object.assign({},fullAccess);
+      btn.disabled=false; btn.innerHTML='<i class="ti ti-device-floppy"></i> Save access';
+      toast('✓ '+(m.name||'Member')+' ka access save ho gaya','success');
+    })
+    .catch(function(e){ btn.disabled=false; btn.innerHTML='<i class="ti ti-device-floppy"></i> Save access'; toast('Save error: '+e.message,'error'); });
+}
+</script>
+</body>
+</html>
