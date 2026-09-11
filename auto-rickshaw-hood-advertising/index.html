@@ -22,7 +22,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Auto Rickshaw Hood Advertising (Retro/Top) — AutoRickshawAds"><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Auto Rickshaw Hood Advertising in 200+ Cities — From ₹499"/><meta name="twitter:description" content="Auto rickshaw hood advertising, ₹499 per auto + GST, minimum 200. Branding on the top, back, left and right. 500-600 GSM rexine, GPS-verified proof."/><meta name="twitter:image" content="https://autorickshawads.com/assets/og-image.jpg"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"Auto Rickshaw Hood Advertising","provider":{"@type":"LocalBusiness","name":"AutoRickshawAds","telephone":"+91-8484038138","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"priceRange":"₹149 - ₹499","image":"https://autorickshawads.com/assets/og-image.jpg"},"areaServed":{"@type":"Country","name":"India"},"offers":{"@type":"Offer","price":"499","priceCurrency":"INR"}}
+{"@context":"https://schema.org","@type":"Service","serviceType":"Auto Rickshaw Hood Advertising","provider":{"@type":"LocalBusiness","name":"AutoRickshawAds","telephone":"+91-8484086163","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"priceRange":"₹149 - ₹499","image":"https://autorickshawads.com/assets/og-image.jpg"},"areaServed":{"@type":"Country","name":"India"},"offers":{"@type":"Offer","price":"499","priceCurrency":"INR"}}
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is auto rickshaw hood advertising?","acceptedAnswer":{"@type":"Answer","text":"It's branding printed on the roof canopy (hood) of an auto rickshaw, covering the back, left, right and top. It's the most visible form of rickshaw advertising and is also called retro or top advertising."}},{"@type":"Question","name":"What are the auto rickshaw hood advertising sizes?","acceptedAnswer":{"@type":"Answer","text":"Standard print sizes are: back panel 40\u2033W \u00d7 17\u2033H, left side 20\u2033W \u00d7 17\u2033H, right side 20\u2033W \u00d7 17\u2033H and top panel 24\u2033W \u00d7 6\u2033H \u2014 an overall artwork size of 96\u2033W \u00d7 26\u2033H. Design with 3mm bleed and keep key content inside the safe margin."}},{"@type":"Question","name":"How long does a hood advertising campaign last?","acceptedAnswer":{"@type":"Answer","text":"The rexine hood is built for around 6 months of durability with a one-time cost, making it a cost-effective long-term outdoor medium."}},{"@type":"Question","name":"Which cities do you cover?","acceptedAnswer":{"@type":"Answer","text":"We operate across 200+ cities in India with a network of 44,000+ verified auto rickshaws, from metros to tier-3 towns."}},{"@type":"Question","name":"How is the pricing decided?","acceptedAnswer":{"@type":"Answer","text":"Starting price is around \u20b9399 per rickshaw. Final bulk pricing depends on city, quantity and campaign duration \u2014 contact us on WhatsApp for an exact quote."}},{"@type":"Question","name":"Do I get proof of installation?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every installed rickshaw is photographed with GPS coordinates so you can verify exactly where your brand is running."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -244,13 +244,16 @@ document.addEventListener('click',function(e){
   function stampLinks(){
     var as=document.querySelectorAll('a[href*="wa.me"]');
     for(var i=0;i<as.length;i++){
-      var a=as[i],h=a.getAttribute('href')||'';
-      if(h.indexOf('Ref%20')>-1||h.indexOf('(Ref ')>-1)continue;
+      var a=as[i];
+      if(a.getAttribute('data-ara-ref'))continue;
+      var h=a.getAttribute('href')||'';
       try{
         var u=new URL(h,location.origin);
         var t=u.searchParams.get('text')||'Hi, I want a quote for auto rickshaw advertising.';
+        t=t.replace(/\s*\(Ref [^)]*\)/g,'');
         u.searchParams.set('text',t+'  (Ref '+ref+')');
         a.setAttribute('href',u.toString());
+        a.setAttribute('data-ara-ref','1');
       }catch(e){}
     }
   }
@@ -289,7 +292,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <a href="/auto-rickshaw-hood-advertising/">Hood Advertising</a>
 <a href="/auto-rickshaw-back-panel-advertising/">Back Panel</a>
 <a href="/auto-rickshaw-hood-manufacturer/">Manufacturing</a>
-<a href="https://wa.me/918484038138" class="nav-cta">Get Free Quote</a>
+<a href="https://wa.me/918484086163" class="nav-cta">Get Free Quote</a>
 </nav>
 <div class="burger"><span></span><span></span><span></span></div>
 </div></header>
@@ -303,7 +306,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <p class="lead">The full roof canopy — the single most visible surface on a rickshaw. Your brand seen head-on at every signal, junction and market across 200+ cities.</p>
 <div class="price-tag"><span class="from">Starting from</span><span class="amt">₹499</span><span class="unit">per rickshaw + 18% GST · minimum 200 rickshaws</span></div>
 <div class="hero-cta">
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote%20for%20Auto%20Rickshaw%20Hood%20Advertising" class="btn btn-primary">Get Bulk Quote on WhatsApp →</a>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote%20for%20Auto%20Rickshaw%20Hood%20Advertising" class="btn btn-primary">Get Bulk Quote on WhatsApp →</a>
 <a href="/#calculator" class="btn btn-ghost">Calculate Reach</a>
 </div>
 </div>
@@ -320,8 +323,8 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
     <p>Full-canopy branding on the top, back, left and right. Tell us the city and quantity and we will price it today.</p>
     <ul><li><b>✓</b><span>4-side coverage, ~1,500 views per rickshaw per day</span></li><li><b>✓</b><span>500-600 GSM rexine, solvent printed, ~6-month life</span></li><li><b>✓</b><span>GPS-stamped photo proof of every installation</span></li><li><b>✓</b><span>₹499 per rickshaw + 18% GST · minimum 200</span></li></ul>
     <div class="lp-call">
-      <a class="wa" href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote">Message on WhatsApp</a>
-      <a href="tel:+918484038138">Call +91 84840 38138</a>
+      <a class="wa" href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote">Message on WhatsApp</a>
+      <a href="tel:+918484086163">Call +91 84840 86163</a>
     </div>
   </div>
   <form class="lead-form" action="https://api.web3forms.com/submit" method="POST" id="lpForm">
@@ -415,7 +418,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <label>Campaign Duration &mdash; <span class="calc-val" id="vD">3</span> months</label>
 <input type="range" id="rDur" min="1" max="12" value="3" step="1" aria-label="Campaign duration in months">
 </div>
-<a href="https://wa.me/918484038138?text=Hi%2C%20I%20used%20the%20reach%20calculator%20on%20your%20site%20and%20want%20an%20exact%20quote%20for%20auto%20rickshaw%20hood%20advertising." class="btn btn-primary" style="width:100%;justify-content:center">Get Exact Quote on WhatsApp &rarr;</a>
+<a href="https://wa.me/918484086163?text=Hi%2C%20I%20used%20the%20reach%20calculator%20on%20your%20site%20and%20want%20an%20exact%20quote%20for%20auto%20rickshaw%20hood%20advertising." class="btn btn-primary" style="width:100%;justify-content:center">Get Exact Quote on WhatsApp &rarr;</a>
 </div>
 <div>
 <div class="calc-out"><div class="big" id="outReach">1.35 Cr</div><div class="cap">Estimated Total Impressions</div></div>
@@ -430,7 +433,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 
 <section><div class="wrap">
 <div class="cta-band"><div><h2>Ready to Own the Roof?</h2><p>Get a free bulk quote for hood advertising in your city or pan-India.</p></div>
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote%20for%20Auto%20Rickshaw%20Hood%20Advertising" class="btn btn-dark">Get My Free Quote →</a></div>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote%20for%20Auto%20Rickshaw%20Hood%20Advertising" class="btn btn-dark">Get My Free Quote →</a></div>
 </div></section>
 
 <section class="alt"><div class="wrap">
@@ -454,15 +457,15 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <a href="/auto-rickshaw-hood-manufacturer/">Hood Manufacturing</a>
 <a href="/auto-rickshaw-hood-fitting/">Hood Fitting</a></div>
 <div class="foot-col"><h3>Company</h3>
-<a href="/">Home</a><a href="/#calculator">Reach Calculator</a><a href="https://wa.me/918484038138">Contact</a></div>
+<a href="/">Home</a><a href="/#calculator">Reach Calculator</a><a href="https://wa.me/918484086163">Contact</a></div>
 <div class="foot-col"><h3>Get in Touch</h3>
-<a href="https://wa.me/918484038138">WhatsApp: +91 84840 38138</a>
+<a href="https://wa.me/918484086163">WhatsApp: +91 84840 86163</a>
 <a href="mailto:info@autorickshawads.com">info@autorickshawads.com</a>
 <a>Pune, Maharashtra</a></div>
 </div>
 <div class="foot-bottom"><span>© 2026 AutoRickshawAds. All rights reserved.</span><span>Auto Rickshaw Advertising · Hood · Back Panel · Manufacturing</span></div>
 </div></footer>
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote" class="wa-float" aria-label="WhatsApp">💬</a>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote" class="wa-float" aria-label="WhatsApp">💬</a>
 <script>
 document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
 document.querySelector('.burger').addEventListener('click',()=>{const n=document.querySelector('.nav-links');const v=n.style.display==='flex';n.style.cssText=v?'display:none':'display:flex;position:absolute;top:64px;right:22px;flex-direction:column;background:var(--charcoal);padding:16px;border-radius:12px;border:1px solid var(--line)';});
@@ -487,7 +490,7 @@ document.querySelector('.burger').addEventListener('click',()=>{const n=document
       } else { throw new Error(d.message||'error'); }
     }catch(err){
       note.className='form-note err';
-      note.innerHTML='Could not send. Please message us on <a href="https://wa.me/918484038138" style="color:var(--yellow)">WhatsApp</a> instead.';
+      note.innerHTML='Could not send. Please message us on <a href="https://wa.me/918484086163" style="color:var(--yellow)">WhatsApp</a> instead.';
     }
     btn.textContent=label;btn.disabled=false;
   });

@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="About AutoRickshawAds | Auto Rickshaw Advertising Company — AutoRickshawAds"><meta name="twitter:title" content="Auto Rickshaw Advertising Agency in India — About Us"/><meta name="twitter:description" content="AutoRickshawAds runs auto rickshaw hood &amp; back panel campaigns end-to-end: design, in-house printing, fitting and GPS-stamped proof across 200+ cities."/><meta name="twitter:image" content="https://autorickshawads.com/assets/og-image.jpg"/>
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About AutoRickshawAds","url":"https://autorickshawads.com/about/","mainEntity":{"@type":"Organization","name":"AutoRickshawAds","telephone":"+91-8484038138","email":"info@autorickshawads.com","areaServed":"IN","contactPoint":{"@type":"ContactPoint","telephone":"+91-8484038138","contactType":"sales","availableLanguage":["en","hi"]}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About AutoRickshawAds","url":"https://autorickshawads.com/about/","mainEntity":{"@type":"Organization","name":"AutoRickshawAds","telephone":"+91-8484086163","email":"info@autorickshawads.com","areaServed":"IN","contactPoint":{"@type":"ContactPoint","telephone":"+91-8484086163","contactType":"sales","availableLanguage":["en","hi"]}}}</script>
 <style>
 /* skip link (a11y) */
 .skip-link{position:absolute;left:-9999px;top:0;z-index:99999;background:#111;color:#fff;padding:12px 18px;border-radius:0 0 10px 0;font-weight:700;text-decoration:none}
@@ -344,13 +344,16 @@ document.addEventListener('click',function(e){
   function stampLinks(){
     var as=document.querySelectorAll('a[href*="wa.me"]');
     for(var i=0;i<as.length;i++){
-      var a=as[i],h=a.getAttribute('href')||'';
-      if(h.indexOf('Ref%20')>-1||h.indexOf('(Ref ')>-1)continue;
+      var a=as[i];
+      if(a.getAttribute('data-ara-ref'))continue;
+      var h=a.getAttribute('href')||'';
       try{
         var u=new URL(h,location.origin);
         var t=u.searchParams.get('text')||'Hi, I want a quote for auto rickshaw advertising.';
+        t=t.replace(/\s*\(Ref [^)]*\)/g,'');
         u.searchParams.set('text',t+'  (Ref '+ref+')');
         a.setAttribute('href',u.toString());
+        a.setAttribute('data-ara-ref','1');
       }catch(e){}
     }
   }
@@ -379,7 +382,7 @@ document.addEventListener('click',function(e){
 <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"QuxTZq2WrHRCteb76wuYv7",debug:true});
 oaiq("measure","contents_viewed",{type:"contents"});</script>
 <!-- ===== end analytics ===== -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://autorickshawads.com/#business","name":"AutoRickshawAds — Prajapati Advertising","url":"https://autorickshawads.com/","image":"https://autorickshawads.com/assets/og-image.jpg","logo":"https://autorickshawads.com/logo-primary.svg","telephone":"+91-8484038138","email":"info@autorickshawads.com","priceRange":"₹149 - ₹499","description":"Auto rickshaw hood advertising, back panel advertising and auto rickshaw hood manufacturing across 200+ Indian cities. GPS-verified installation with photo proof.","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","postalCode":"411001","addressCountry":"IN"},"areaServed":{"@type":"Country","name":"India"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"19:30"}],"contactPoint":{"@type":"ContactPoint","telephone":"+91-8484038138","contactType":"sales","availableLanguage":["en","hi","mr"],"areaServed":"IN"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://autorickshawads.com/#business","name":"AutoRickshawAds — Prajapati Advertising","url":"https://autorickshawads.com/","image":"https://autorickshawads.com/assets/og-image.jpg","logo":"https://autorickshawads.com/logo-primary.svg","telephone":"+91-8484086163","email":"info@autorickshawads.com","priceRange":"₹149 - ₹499","description":"Auto rickshaw hood advertising, back panel advertising and auto rickshaw hood manufacturing across 200+ Indian cities. GPS-verified installation with photo proof.","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","postalCode":"411001","addressCountry":"IN"},"areaServed":{"@type":"Country","name":"India"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"19:30"}],"contactPoint":{"@type":"ContactPoint","telephone":"+91-8484086163","contactType":"sales","availableLanguage":["en","hi","mr"],"areaServed":"IN"}}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -422,7 +425,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
           <li><b>🏭</b>&nbsp; Manufacturing and printing in-house keeps pricing low and quality consistent</li>
           <li><b>📸</b>&nbsp; Every campaign is verifiable: live GPS coordinates on installation photos</li>
         </ul>
-        <a class="lead-wa" href="https://wa.me/918484038138?text=Hi%2C%20I%20want%20to%20know%20more%20about%20AutoRickshawAds.">💬 Talk to us on WhatsApp</a>
+        <a class="lead-wa" href="https://wa.me/918484086163?text=Hi%2C%20I%20want%20to%20know%20more%20about%20AutoRickshawAds.">💬 Talk to us on WhatsApp</a>
 <h2 class="sub-h" style="margin:24px 0 10px">How a campaign actually runs</h2>
 <p style="color:var(--smoke);margin:0 0 12px">Most enquiries reach us with a budget and a city, not a media plan. So the first thing we do is work backwards from the area you actually want to be seen in. A hundred rickshaws spread thinly across a metro is weaker than sixty concentrated on the corridors your customers use every day, and we will say so before you book. Once the area and the count are agreed, artwork moves to our own printing floor, hoods are stitched and cured, and field teams fit them rickshaw by rickshaw. Every unit is photographed at the point of installation with GPS coordinates burnt into the image, so the count you paid for is the count you can verify.</p>
 <p style="color:var(--smoke);margin:0 0 12px">A standard city campaign takes about seven to ten working days from approved artwork to fully deployed fleet. Pan-India rollouts run city by city in parallel and typically complete inside three weeks. Through the campaign the hoods stay under warranty — if a panel tears, fades badly or a rickshaw leaves the fleet, we replace it at no extra cost so your paid count never quietly drops.</p>
@@ -450,8 +453,8 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
     <p>Planning a campaign across several cities? Send the brief and budget and we will come back with a city-by-city plan and an exact rate.</p>
     <ul><li><b>✓</b><span>One agency that also owns the production unit</span></li><li><b>✓</b><span>200+ cities, 380+ brands, 12+ years</span></li><li><b>✓</b><span>GPS-stamped proof on every rickshaw</span></li><li><b>✓</b><span>Pan-India rollouts handled end to end</span></li></ul>
     <div class="lp-call">
-      <a class="wa" href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote">Message on WhatsApp</a>
-      <a href="tel:+918484038138">Call +91 84840 38138</a>
+      <a class="wa" href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote">Message on WhatsApp</a>
+      <a href="tel:+918484086163">Call +91 84840 86163</a>
     </div>
   </div>
   <form class="lead-form" action="https://api.web3forms.com/submit" method="POST" id="lpForm">
@@ -502,7 +505,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
       </div>
       <div class="foot-col">
         <h3>Get in Touch</h3>
-        <a href="https://wa.me/918484038138">WhatsApp: +91 84840 38138</a>
+        <a href="https://wa.me/918484086163">WhatsApp: +91 84840 86163</a>
         <a href="mailto:info@autorickshawads.com">info@autorickshawads.com</a>
         <a>Pune, Maharashtra</a>
       </div>
@@ -533,7 +536,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
       } else { throw new Error(d.message||'error'); }
     }catch(err){
       note.className='form-note err';
-      note.innerHTML='Could not send. Please message us on <a href="https://wa.me/918484038138" style="color:var(--yellow)">WhatsApp</a> instead.';
+      note.innerHTML='Could not send. Please message us on <a href="https://wa.me/918484086163" style="color:var(--yellow)">WhatsApp</a> instead.';
     }
     btn.textContent=label;btn.disabled=false;
   });

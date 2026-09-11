@@ -21,7 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Auto Rickshaw Hood Manufacturer in Coimbatore — AutoRickshawAds"><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Auto Rickshaw Hood Manufacturer in Coimbatore — From ₹399"/><meta name="twitter:description" content="Auto rickshaw hood manufacturing in Coimbatore from ₹399/hood. In-house printing, stitching & fitting. Covering Gandhipuram. Free bulk quote on WhatsApp."/><meta name="twitter:image" content="https://autorickshawads.com/assets/og-image.jpg"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"Auto Rickshaw Hood Manufacturer","provider":{"@type":"LocalBusiness","name":"AutoRickshawAds","telephone":"+91-8484038138","priceRange":"₹149 - ₹499","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"image":"https://autorickshawads.com/assets/og-image.jpg"},"areaServed":{"@type":"City","name":"Coimbatore"},"offers":{"@type":"Offer","price":"399","priceCurrency":"INR"}}
+{"@context":"https://schema.org","@type":"Service","serviceType":"Auto Rickshaw Hood Manufacturer","provider":{"@type":"LocalBusiness","name":"AutoRickshawAds","telephone":"+91-8484086163","priceRange":"₹149 - ₹499","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"image":"https://autorickshawads.com/assets/og-image.jpg"},"areaServed":{"@type":"City","name":"Coimbatore"},"offers":{"@type":"Offer","price":"399","priceCurrency":"INR"}}
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does auto rickshaw hood manufacturing cost in Coimbatore?","acceptedAnswer":{"@type":"Answer","text":"Hood Manufacturing in Coimbatore starts at ₹399 per rickshaw. The rate falls as volume rises, so a 200-rickshaw run in Coimbatore is priced very differently from a 20-rickshaw test. Send us the areas and the count on WhatsApp and we will quote exactly, with no agency markup."}},{"@type":"Question","name":"Which areas of Coimbatore do you cover?","acceptedAnswer":{"@type":"Answer","text":"We run across Coimbatore and the wider Tamil Nadu area, concentrating on Gandhipuram, Avinashi Road, RS Puram and the Peelamedu–Singanallur industrial stretch. Named neighbourhoods include Gandhipuram, RS Puram, Peelamedu, Saibaba Colony, Singanallur and Avinashi Road. If the specific locality you want is not on that list, ask — coverage in Coimbatore is wider than the corridors we publish."}},{"@type":"Question","name":"Which businesses advertise on rickshaws in Coimbatore?","acceptedAnswer":{"@type":"Answer","text":"The regular advertiser mix in Coimbatore is textile mills and machinery suppliers, engineering and pump manufacturers in Peelamedu, hospitals along Avinashi Road, jewellery retail in RS Puram, and engineering colleges. Coimbatore is our strongest B2B rickshaw market: industrial suppliers use back panels to reach buyers and workers moving between Peelamedu, Singanallur and the SIDCO estates, which no other outdoor medium covers as cheaply."}},{"@type":"Question","name":"What language should the artwork be in for Coimbatore?","acceptedAnswer":{"@type":"Answer","text":"Tamil headlines with technical product terms left in English is the standard formula for the industrial advertiser base here. We handle the design coordination and printing in-house, so getting the Tamil version right costs you nothing extra."}},{"@type":"Question","name":"How long does a hood manufacturing campaign last in Coimbatore?","acceptedAnswer":{"@type":"Answer","text":"We supply finished hoods rather than rent media, so there is no campaign duration — the unit is yours. Build quality is specified for about six months of hard daily use in Coimbatore conditions."}},{"@type":"Question","name":"Do I get proof that my ad is actually running in Coimbatore?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every rickshaw in your Coimbatore campaign is photographed at the point of installation with live GPS coordinates stamped into the image, so you can verify the count and the locations yourself. You get the full photo set, not a sample."}},{"@type":"Question","name":"When is the best time to book in Coimbatore?","acceptedAnswer":{"@type":"Answer","text":"Timing-wise, the wedding season and the pre-monsoon industrial buying cycle both concentrate demand between November and February. Inventory on the busiest Coimbatore corridors gets committed several weeks ahead of those windows, so book early if your campaign has to land in season."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -177,13 +177,16 @@ document.addEventListener('click',function(e){
   function stampLinks(){
     var as=document.querySelectorAll('a[href*="wa.me"]');
     for(var i=0;i<as.length;i++){
-      var a=as[i],h=a.getAttribute('href')||'';
-      if(h.indexOf('Ref%20')>-1||h.indexOf('(Ref ')>-1)continue;
+      var a=as[i];
+      if(a.getAttribute('data-ara-ref'))continue;
+      var h=a.getAttribute('href')||'';
       try{
         var u=new URL(h,location.origin);
         var t=u.searchParams.get('text')||'Hi, I want a quote for auto rickshaw advertising.';
+        t=t.replace(/\s*\(Ref [^)]*\)/g,'');
         u.searchParams.set('text',t+'  (Ref '+ref+')');
         a.setAttribute('href',u.toString());
+        a.setAttribute('data-ara-ref','1');
       }catch(e){}
     }
   }
@@ -222,7 +225,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <a href="/auto-rickshaw-hood-advertising/">Hood Advertising</a>
 <a href="/auto-rickshaw-back-panel-advertising/">Back Panel</a>
 <a href="/auto-rickshaw-hood-manufacturer/">Manufacturing</a>
-<a href="https://wa.me/918484038138" class="nav-cta">Get Free Quote</a>
+<a href="https://wa.me/918484086163" class="nav-cta">Get Free Quote</a>
 </nav><div class="burger"><span></span><span></span><span></span></div>
 </div></header>
 <main id="main" tabindex="-1">
@@ -235,7 +238,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <p class="lead">In-house hood manufacturing — printing, stitching and fitting across Coimbatore — GPS-verified, with photo proof of every rickshaw. Covering Gandhipuram, RS Puram, Peelamedu, Saibaba Colony and Singanallur.</p>
 <div class="price-tag"><span class="from">Starting from</span><span class="amt">₹399</span><span class="unit">per hood, materials only + 18% GST · min 200</span></div>
 <div class="hero-cta">
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20auto%20rickshaw%20hood%20manufacturer%20in%20Coimbatore" class="btn btn-primary">Get Coimbatore Quote on WhatsApp →</a>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20auto%20rickshaw%20hood%20manufacturer%20in%20Coimbatore" class="btn btn-primary">Get Coimbatore Quote on WhatsApp →</a>
 <a href="/#calculator" class="btn btn-ghost">Calculate Reach</a>
 </div>
 </div>
@@ -257,7 +260,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 
 <section><div class="wrap">
 <div class="cta-band"><div><h2>Advertise in Coimbatore Today</h2><p>Get a free bulk quote for hood manufacturing in Coimbatore. Reply in minutes on WhatsApp.</p></div>
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20auto%20rickshaw%20hood%20manufacturer%20in%20Coimbatore" class="btn btn-dark">Get My Free Quote →</a></div>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20auto%20rickshaw%20hood%20manufacturer%20in%20Coimbatore" class="btn btn-dark">Get My Free Quote →</a></div>
 </div></section>
 
 <section class="local-detail"><div class="wrap"><div class="sec-head"><span class="sec-eyebrow">Hood Manufacturing · Tamil Nadu</span><h2 style="margin:0">Auto Rickshaw Hood Manufacturing in Coimbatore — Local Detail</h2></div><div class="prose ld"><h2>Designing for a Coimbatore audience</h2><p>Tamil headlines with technical product terms left in English is the standard formula for the industrial advertiser base here.</p><p>Format matters as much as language. In Coimbatore we are branding the finished hood itself — frame, fabric and print supplied as a unit, so the message has to survive being read at a distance, in traffic, often at an angle. One headline, one proof point and one action — a number, a QR code or a location — is the formula that works. We coordinate the design and print in-house, so if the first proof does not read well at road distance we change it before anything is fitted.</p><h2>Coimbatore: who advertises, and where</h2><p>Coimbatore’s compact core means a rickshaw passes the same commercial junctions several times a shift, producing frequency rather than raw reach.</p><p>The advertiser base in Coimbatore is led by textile mills and machinery suppliers, engineering and pump manufacturers in Peelamedu, hospitals along Avinashi Road, jewellery retail in RS Puram, and engineering colleges. Coimbatore is our strongest B2B rickshaw market: industrial suppliers use back panels to reach buyers and workers moving between Peelamedu, Singanallur and the SIDCO estates, which no other outdoor medium covers as cheaply.</p><p>On timing: the wedding season and the pre-monsoon industrial buying cycle both concentrate demand between November and February.</p><h2>How we place a fleet in Coimbatore</h2><p>Our hood manufacturing fleet in Coimbatore is planned around Gandhipuram, Avinashi Road, RS Puram and the Peelamedu–Singanallur industrial stretch. Depending on budget we will either concentrate units on two or three of those to build frequency, or spread them for broader reach — for most first campaigns in Coimbatore we recommend concentration, because a brand seen five times by the right commuter beats one seen once by five.</p><p>Neighbourhood coverage typically includes Gandhipuram, RS Puram, Peelamedu, Saibaba Colony, Singanallur and Avinashi Road, with routes extended into adjoining Tamil Nadu districts on request. Every unit is photographed at installation with live GPS coordinates, so the Coimbatore coverage you are quoted is the coverage you can audit afterwards.</p></div></div></section><section class="alt"><div class="wrap">
@@ -280,13 +283,13 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <a href="/auto-rickshaw-hood-fitting/">Hood Fitting</a></div>
 <div class="foot-col"><h3>Popular Cities</h3><a href="/auto-rickshaw-hood-manufacturer/mumbai/">Mumbai</a><a href="/auto-rickshaw-hood-manufacturer/pune/">Pune</a><a href="/auto-rickshaw-hood-manufacturer/delhi/">Delhi</a><a href="/auto-rickshaw-hood-manufacturer/bangalore/">Bangalore</a><a href="/auto-rickshaw-hood-manufacturer/hyderabad/">Hyderabad</a><a href="/auto-rickshaw-hood-manufacturer/chennai/">Chennai</a></div>
 <div class="foot-col"><h3>Company</h3><a href="/about/">About Us</a><a href="/contact/">Contact</a><a href="/#calculator">Reach Calculator</a></div><div class="foot-col"><h3>Get in Touch</h3>
-<a href="https://wa.me/918484038138">WhatsApp: +91 84840 38138</a>
+<a href="https://wa.me/918484086163">WhatsApp: +91 84840 86163</a>
 <a href="mailto:info@autorickshawads.com">info@autorickshawads.com</a>
 <a>Pune, Maharashtra</a></div>
 </div>
 <div class="foot-bottom"><span>© 2026 AutoRickshawAds. All rights reserved.</span><span>Auto Rickshaw Advertising · Hood · Back Panel · Manufacturing</span></div>
 </div></footer>
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote" class="wa-float" aria-label="WhatsApp">💬</a>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote" class="wa-float" aria-label="WhatsApp">💬</a>
 <script>
 document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
 document.querySelector('.burger').addEventListener('click',()=>{const n=document.querySelector('.nav-links');const v=n.style.display==='flex';n.style.cssText=v?'display:none':'display:flex;position:absolute;top:64px;right:22px;flex-direction:column;background:var(--charcoal);padding:16px;border-radius:12px;border:1px solid var(--line)';});

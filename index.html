@@ -11,7 +11,7 @@
 <meta name="keywords" content="auto rickshaw advertising, auto rickshaw hood advertising, auto rickshaw retro advertising, auto rickshaw top advertising, auto rickshaw back panel advertising, auto rickshaw hood manufacturer, rickshaw branding India">
 <link rel="canonical" href="https://autorickshawads.com/">
 <link rel="preload" as="image" href="assets/hero-banner.webp" type="image/webp" fetchpriority="high">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://autorickshawads.com/#organization","name":"AutoRickshawAds","legalName":"Prajapati Advertising","url":"https://autorickshawads.com/","logo":{"@type":"ImageObject","url":"https://autorickshawads.com/assets/og-image.jpg","width":1200,"height":630},"image":"https://autorickshawads.com/assets/og-image.jpg","description":"Auto rickshaw hood advertising, back panel advertising and in-house hood manufacturing across 200+ Indian cities.","email":"info@autorickshawads.com","telephone":"+91-8484038138","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"areaServed":{"@type":"Country","name":"India"},"knowsAbout":["Auto rickshaw advertising","Auto rickshaw hood advertising","Auto rickshaw back panel advertising","Auto rickshaw hood manufacturing","Transit advertising India"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://autorickshawads.com/#organization","name":"AutoRickshawAds","legalName":"Prajapati Advertising","url":"https://autorickshawads.com/","logo":{"@type":"ImageObject","url":"https://autorickshawads.com/assets/og-image.jpg","width":1200,"height":630},"image":"https://autorickshawads.com/assets/og-image.jpg","description":"Auto rickshaw hood advertising, back panel advertising and in-house hood manufacturing across 200+ Indian cities.","email":"info@autorickshawads.com","telephone":"+91-8484086163","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"areaServed":{"@type":"Country","name":"India"},"knowsAbout":["Auto rickshaw advertising","Auto rickshaw hood advertising","Auto rickshaw back panel advertising","Auto rickshaw hood manufacturing","Transit advertising India"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://autorickshawads.com/#website","url":"https://autorickshawads.com/","name":"AutoRickshawAds","publisher":{"@id":"https://autorickshawads.com/#organization"},"inLanguage":"en-IN"}</script>
 <meta name="robots" content="index, follow">
 
@@ -44,7 +44,7 @@
   "image": "https://autorickshawads.com/assets/og-image.jpg",
   "description": "GPS-verified auto rickshaw advertising agency operating in 200+ cities across India. Hood advertising, back panel vinyl and in-house hood manufacturing.",
   "url": "https://autorickshawads.com",
-  "telephone": "+91-8484038138",
+  "telephone": "+91-8484086163",
   "priceRange": "₹₹",
   "address": {
     "@type": "PostalAddress",
@@ -381,13 +381,16 @@ document.addEventListener('click',function(e){
   function stampLinks(){
     var as=document.querySelectorAll('a[href*="wa.me"]');
     for(var i=0;i<as.length;i++){
-      var a=as[i],h=a.getAttribute('href')||'';
-      if(h.indexOf('Ref%20')>-1||h.indexOf('(Ref ')>-1)continue;
+      var a=as[i];
+      if(a.getAttribute('data-ara-ref'))continue;
+      var h=a.getAttribute('href')||'';
       try{
         var u=new URL(h,location.origin);
         var t=u.searchParams.get('text')||'Hi, I want a quote for auto rickshaw advertising.';
+        t=t.replace(/\s*\(Ref [^)]*\)/g,'');
         u.searchParams.set('text',t+'  (Ref '+ref+')');
         a.setAttribute('href',u.toString());
+        a.setAttribute('data-ara-ref','1');
       }catch(e){}
     }
   }
@@ -432,7 +435,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
       <a href="#why">Why Us</a>
       <a href="#calculator">Visibility</a>
       <a href="#process">How It Works</a>
-      <a href="https://wa.me/918484038138?text=Hi%2C%20I%20want%20a%20free%20quote%20for%20auto%20rickshaw%20advertising." class="nav-cta">Get Free Quote</a>
+      <a href="https://wa.me/918484086163?text=Hi%2C%20I%20want%20a%20free%20quote%20for%20auto%20rickshaw%20advertising." class="nav-cta">Get Free Quote</a>
     </nav>
     <div class="burger"><span></span><span></span><span></span></div>
   </div>
@@ -447,7 +450,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
       <h1>Put Your Brand on<span class="hl">44,000 Moving Billboards</span></h1>
       <p class="lead">Auto rickshaw advertising across 200+ cities — hood (retro/top) branding, back panel vinyl, and in-house hood manufacturing. Every installation GPS-stamped and photo-verified, so you see exactly where your brand runs.</p>
       <div class="hero-cta">
-        <a href="https://wa.me/918484038138?text=Hi%2C%20I%20want%20a%20free%20quote%20for%20auto%20rickshaw%20advertising.%20My%20city%20and%20quantity%3A%20" class="btn btn-primary">Get Free Quote on WhatsApp →</a>
+        <a href="https://wa.me/918484086163?text=Hi%2C%20I%20want%20a%20free%20quote%20for%20auto%20rickshaw%20advertising.%20My%20city%20and%20quantity%3A%20" class="btn btn-primary">Get Free Quote on WhatsApp →</a>
         <a href="#calculator" class="btn btn-ghost">Calculate Your Reach</a>
       </div>
       <div class="trust-row">
@@ -480,8 +483,8 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
     <p>Tell us the city, the surface and roughly how many rickshaws. We come back with an exact number — no long form, no sales call.</p>
     <ul><li><b>✓</b><span>200+ cities, 44,000+ verified rickshaws</span></li><li><b>✓</b><span>Printing, stitching and fitting all in-house</span></li><li><b>✓</b><span>GPS-stamped photo of every rickshaw</span></li><li><b>✓</b><span>Hood ₹499 · back panel ₹150 per rickshaw + 18% GST</span></li></ul>
     <div class="lp-call">
-      <a class="wa" href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote">Message on WhatsApp</a>
-      <a href="tel:+918484038138">Call +91 84840 38138</a>
+      <a class="wa" href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote">Message on WhatsApp</a>
+      <a href="tel:+918484086163">Call +91 84840 86163</a>
     </div>
   </div>
   <form class="lead-form" action="https://api.web3forms.com/submit" method="POST" id="lpForm">
@@ -628,7 +631,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
           <label>Campaign Duration — <span class="calc-val" id="vD">3</span> months</label>
           <input type="range" id="rDur" min="1" max="12" value="3" step="1">
         </div>
-        <a href="https://wa.me/918484038138?text=Hi%2C%20I%20used%20the%20reach%20calculator%20on%20your%20site%20and%20want%20an%20exact%20quote%20for%20auto%20rickshaw%20advertising." class="btn btn-primary" style="width:100%;justify-content:center">Get Exact Quote on WhatsApp →</a>
+        <a href="https://wa.me/918484086163?text=Hi%2C%20I%20used%20the%20reach%20calculator%20on%20your%20site%20and%20want%20an%20exact%20quote%20for%20auto%20rickshaw%20advertising." class="btn btn-primary" style="width:100%;justify-content:center">Get Exact Quote on WhatsApp →</a>
       </div>
       <div>
         <div class="calc-out">
@@ -680,7 +683,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
         <h2>Ready to Hit the Road?</h2>
         <p>Get a free, no-obligation quote for your city or a pan-India campaign. Reply in minutes on WhatsApp.</p>
       </div>
-      <a href="https://wa.me/918484038138?text=Hi%2C%20I%20want%20a%20free%20no-obligation%20quote%20for%20auto%20rickshaw%20advertising.%20My%20city%20is%20" class="btn btn-dark">Get My Free Quote →</a>
+      <a href="https://wa.me/918484086163?text=Hi%2C%20I%20want%20a%20free%20no-obligation%20quote%20for%20auto%20rickshaw%20advertising.%20My%20city%20is%20" class="btn btn-dark">Get My Free Quote →</a>
     </div>
   </div>
 </section>
@@ -790,7 +793,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
       </div>
       <div class="foot-col">
         <h3>Get in Touch</h3>
-        <a href="https://wa.me/918484038138">WhatsApp: +91 84840 38138</a>
+        <a href="https://wa.me/918484086163">WhatsApp: +91 84840 86163</a>
         <a href="mailto:info@autorickshawads.com">info@autorickshawads.com</a>
         <a>Pune, Maharashtra</a>
       </div>
@@ -803,7 +806,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote%20for%20auto%20rickshaw%20advertising" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote%20for%20auto%20rickshaw%20advertising" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
 
 <script>
 // Visibility calculator — REAL formula
@@ -859,7 +862,7 @@ document.querySelector('.burger').addEventListener('click',()=>{
       } else { throw new Error(d.message||'error'); }
     }catch(err){
       note.className='form-note err';
-      note.innerHTML='Could not send. Please message us on <a href="https://wa.me/918484038138" style="color:var(--yellow)">WhatsApp</a> instead.';
+      note.innerHTML='Could not send. Please message us on <a href="https://wa.me/918484086163" style="color:var(--yellow)">WhatsApp</a> instead.';
     }
     btn.textContent=label;btn.disabled=false;
   });

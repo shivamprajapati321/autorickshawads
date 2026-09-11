@@ -21,7 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Auto Rickshaw Back Panel Advertising in Aurangabad — AutoRickshawAds"><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Auto Rickshaw Back Panel Advertising in Aurangabad — ₹150"/><meta name="twitter:description" content="Back panel advertising in Aurangabad from ₹150/rickshaw, minimum 500. Vinyl back panel, GPS-verified photo proof. Covering CIDCO. Free bulk quote on WhatsApp."/><meta name="twitter:image" content="https://autorickshawads.com/assets/og-image.jpg"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"Auto Rickshaw Back Panel Advertising","provider":{"@type":"LocalBusiness","name":"AutoRickshawAds","telephone":"+91-8484038138","priceRange":"₹149 - ₹499","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"image":"https://autorickshawads.com/assets/og-image.jpg"},"areaServed":{"@type":"City","name":"Aurangabad"},"offers":{"@type":"Offer","price":"150","priceCurrency":"INR"}}
+{"@context":"https://schema.org","@type":"Service","serviceType":"Auto Rickshaw Back Panel Advertising","provider":{"@type":"LocalBusiness","name":"AutoRickshawAds","telephone":"+91-8484086163","priceRange":"₹149 - ₹499","address":{"@type":"PostalAddress","addressLocality":"Pune","addressRegion":"Maharashtra","addressCountry":"IN"},"image":"https://autorickshawads.com/assets/og-image.jpg"},"areaServed":{"@type":"City","name":"Aurangabad"},"offers":{"@type":"Offer","price":"150","priceCurrency":"INR"}}
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does auto rickshaw back panel advertising cost in Aurangabad?","acceptedAnswer":{"@type":"Answer","text":"Back Panel Advertising in Aurangabad starts at ₹150 per rickshaw. The rate falls as volume rises, so a 200-rickshaw run in Aurangabad is priced very differently from a 20-rickshaw test. Send us the areas and the count on WhatsApp and we will quote exactly, with no agency markup."}},{"@type":"Question","name":"Which areas of Aurangabad do you cover?","acceptedAnswer":{"@type":"Answer","text":"We run across Aurangabad and the wider Maharashtra area, concentrating on Jalna Road, Kranti Chowk, Nirala Bazar and the Waluj–Chikalthana industrial belt. Named neighbourhoods include Jalna Road, CIDCO, Garkheda, Nirala Bazar, Waluj MIDC and Kranti Chowk. If the specific locality you want is not on that list, ask — coverage in Aurangabad is wider than the corridors we publish."}},{"@type":"Question","name":"Which businesses advertise on rickshaws in Aurangabad?","acceptedAnswer":{"@type":"Answer","text":"The regular advertiser mix in Aurangabad is engineering and auto-component suppliers around Waluj MIDC, hospitals along Jalna Road, hotels serving Ajanta–Ellora tourism, and coaching classes in Garkheda. Aurangabad is a genuine saturation market — brands that would only be a rounding error in a metro budget can own the visible rickshaw traffic of an entire city here."}},{"@type":"Question","name":"What language should the artwork be in for Aurangabad?","acceptedAnswer":{"@type":"Answer","text":"Marathi copy is close to mandatory outside the CIDCO and Jalna Road commercial strips; bilingual panels work best on the tourist corridors. We handle the design coordination and printing in-house, so getting the Marathi version right costs you nothing extra."}},{"@type":"Question","name":"How long does a back panel advertising campaign last in Aurangabad?","acceptedAnswer":{"@type":"Answer","text":"Back panel vinyl is the flexible format: one month, one quarter or a full year in Aurangabad, whatever the campaign needs. Panels are replaced free if they tear or fade inside the booked period."}},{"@type":"Question","name":"Do I get proof that my ad is actually running in Aurangabad?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every rickshaw in your Aurangabad campaign is photographed at the point of installation with live GPS coordinates stamped into the image, so you can verify the count and the locations yourself. You get the full photo set, not a sample."}},{"@type":"Question","name":"When is the best time to book in Aurangabad?","acceptedAnswer":{"@type":"Answer","text":"Timing-wise, the October–February tourist season lifts footfall around the station, Kranti Chowk and the hotel belt. Inventory on the busiest Aurangabad corridors gets committed several weeks ahead of those windows, so book early if your campaign has to land in season."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,13 +189,16 @@ document.addEventListener('click',function(e){
   function stampLinks(){
     var as=document.querySelectorAll('a[href*="wa.me"]');
     for(var i=0;i<as.length;i++){
-      var a=as[i],h=a.getAttribute('href')||'';
-      if(h.indexOf('Ref%20')>-1||h.indexOf('(Ref ')>-1)continue;
+      var a=as[i];
+      if(a.getAttribute('data-ara-ref'))continue;
+      var h=a.getAttribute('href')||'';
       try{
         var u=new URL(h,location.origin);
         var t=u.searchParams.get('text')||'Hi, I want a quote for auto rickshaw advertising.';
+        t=t.replace(/\s*\(Ref [^)]*\)/g,'');
         u.searchParams.set('text',t+'  (Ref '+ref+')');
         a.setAttribute('href',u.toString());
+        a.setAttribute('data-ara-ref','1');
       }catch(e){}
     }
   }
@@ -234,7 +237,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <a href="/auto-rickshaw-hood-advertising/">Hood Advertising</a>
 <a href="/auto-rickshaw-back-panel-advertising/">Back Panel</a>
 <a href="/auto-rickshaw-hood-manufacturer/">Manufacturing</a>
-<a href="https://wa.me/918484038138" class="nav-cta">Get Free Quote</a>
+<a href="https://wa.me/918484086163" class="nav-cta">Get Free Quote</a>
 </nav><div class="burger"><span></span><span></span><span></span></div>
 </div></header>
 <main id="main" tabindex="-1">
@@ -247,7 +250,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <p class="lead">Rear-panel vinyl branding, ideal for qr codes and app installs across Aurangabad — GPS-verified, with photo proof of every rickshaw. Covering CIDCO, Kranti Chowk, Garkheda, Jalna Road and Waluj.</p>
 <div class="price-tag"><span class="from">Starting from</span><span class="amt">₹150</span><span class="unit">per rickshaw + 18% GST · minimum 500 rickshaws</span></div>
 <div class="hero-cta">
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20auto%20rickshaw%20back%20panel%20advertising%20in%20Aurangabad" class="btn btn-primary">Get Aurangabad Quote on WhatsApp →</a>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20auto%20rickshaw%20back%20panel%20advertising%20in%20Aurangabad" class="btn btn-primary">Get Aurangabad Quote on WhatsApp →</a>
 <a href="/#calculator" class="btn btn-ghost">Calculate Reach</a>
 </div>
 </div>
@@ -276,7 +279,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <label>Campaign Duration &mdash; <span class="calc-val" id="vD">3</span> months</label>
 <input type="range" id="rDur" min="1" max="12" value="3" step="1" aria-label="Campaign duration in months">
 </div>
-<a href="https://wa.me/918484038138?text=Hi%2C%20I%20used%20the%20reach%20calculator%20on%20your%20Aurangabad%20page%20and%20want%20an%20exact%20quote%20for%20auto%20rickshaw%20back%20panel%20advertising%20in%20Aurangabad." class="btn btn-primary" style="width:100%;justify-content:center">Get Exact Quote on WhatsApp &rarr;</a>
+<a href="https://wa.me/918484086163?text=Hi%2C%20I%20used%20the%20reach%20calculator%20on%20your%20Aurangabad%20page%20and%20want%20an%20exact%20quote%20for%20auto%20rickshaw%20back%20panel%20advertising%20in%20Aurangabad." class="btn btn-primary" style="width:100%;justify-content:center">Get Exact Quote on WhatsApp &rarr;</a>
 </div>
 <div>
 <div class="calc-out"><div class="big" id="outReach">1.35 Cr</div><div class="cap">Estimated Total Impressions</div></div>
@@ -291,7 +294,7 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 
 <section><div class="wrap">
 <div class="cta-band"><div><h2>Advertise in Aurangabad Today</h2><p>Get a free bulk quote for back panel advertising in Aurangabad. Reply in minutes on WhatsApp.</p></div>
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20auto%20rickshaw%20back%20panel%20advertising%20in%20Aurangabad" class="btn btn-dark">Get My Free Quote →</a></div>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20auto%20rickshaw%20back%20panel%20advertising%20in%20Aurangabad" class="btn btn-dark">Get My Free Quote →</a></div>
 </div></section>
 
 <section class="local-detail"><div class="wrap"><div class="sec-head"><span class="sec-eyebrow">Back Panel Advertising · Maharashtra</span><h2 style="margin:0">Auto Rickshaw Back Panel Advertising in Aurangabad — Local Detail</h2></div><div class="prose ld"><h2>The corridors that matter in Aurangabad</h2><p>Our back panel advertising fleet in Aurangabad is planned around Jalna Road, Kranti Chowk, Nirala Bazar and the Waluj–Chikalthana industrial belt. Depending on budget we will either concentrate units on two or three of those to build frequency, or spread them for broader reach — for most first campaigns in Aurangabad we recommend concentration, because a brand seen five times by the right commuter beats one seen once by five.</p><p>Neighbourhood coverage typically includes Jalna Road, CIDCO, Garkheda, Nirala Bazar, Waluj MIDC and Kranti Chowk, with routes extended into adjoining Maharashtra districts on request. Every unit is photographed at installation with live GPS coordinates, so the Aurangabad coverage you are quoted is the coverage you can audit afterwards.</p><h2>Creative notes for Aurangabad</h2><p>Marathi copy is close to mandatory outside the CIDCO and Jalna Road commercial strips; bilingual panels work best on the tourist corridors.</p><p>Format matters as much as language. In Aurangabad we are branding the rear panel, read by every vehicle queued behind the rickshaw, so the message has to survive being read at a distance, in traffic, often at an angle. One headline, one proof point and one action — a number, a QR code or a location — is the formula that works. We coordinate the design and print in-house, so if the first proof does not read well at road distance we change it before anything is fitted.</p><h2>The Aurangabad picture, in practice</h2><p>The city fleet is compact enough that a 60–80 rickshaw campaign produces near-saturation coverage, something that would need several hundred units in Pune or Mumbai.</p><p>The advertiser base in Aurangabad is led by engineering and auto-component suppliers around Waluj MIDC, hospitals along Jalna Road, hotels serving Ajanta–Ellora tourism, and coaching classes in Garkheda. Aurangabad is a genuine saturation market — brands that would only be a rounding error in a metro budget can own the visible rickshaw traffic of an entire city here.</p><p>On timing: the October–February tourist season lifts footfall around the station, Kranti Chowk and the hotel belt.</p></div></div></section><section class="alt"><div class="wrap">
@@ -314,13 +317,13 @@ oaiq("measure","contents_viewed",{type:"contents"});</script>
 <a href="/auto-rickshaw-hood-fitting/">Hood Fitting</a></div>
 <div class="foot-col"><h3>Popular Cities</h3><a href="/auto-rickshaw-back-panel-advertising/mumbai/">Mumbai</a><a href="/auto-rickshaw-back-panel-advertising/pune/">Pune</a><a href="/auto-rickshaw-back-panel-advertising/delhi/">Delhi</a><a href="/auto-rickshaw-back-panel-advertising/bangalore/">Bangalore</a><a href="/auto-rickshaw-back-panel-advertising/hyderabad/">Hyderabad</a><a href="/auto-rickshaw-back-panel-advertising/chennai/">Chennai</a></div>
 <div class="foot-col"><h3>Company</h3><a href="/about/">About Us</a><a href="/contact/">Contact</a><a href="/#calculator">Reach Calculator</a></div><div class="foot-col"><h3>Get in Touch</h3>
-<a href="https://wa.me/918484038138">WhatsApp: +91 84840 38138</a>
+<a href="https://wa.me/918484086163">WhatsApp: +91 84840 86163</a>
 <a href="mailto:info@autorickshawads.com">info@autorickshawads.com</a>
 <a>Pune, Maharashtra</a></div>
 </div>
 <div class="foot-bottom"><span>© 2026 AutoRickshawAds. All rights reserved.</span><span>Auto Rickshaw Advertising · Hood · Back Panel · Manufacturing</span></div>
 </div></footer>
-<a href="https://wa.me/918484038138?text=Hi,%20I%20want%20a%20quote" class="wa-float" aria-label="WhatsApp">💬</a>
+<a href="https://wa.me/918484086163?text=Hi,%20I%20want%20a%20quote" class="wa-float" aria-label="WhatsApp">💬</a>
 <script>
 document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
 document.querySelector('.burger').addEventListener('click',()=>{const n=document.querySelector('.nav-links');const v=n.style.display==='flex';n.style.cssText=v?'display:none':'display:flex;position:absolute;top:64px;right:22px;flex-direction:column;background:var(--charcoal);padding:16px;border-radius:12px;border:1px solid var(--line)';});
